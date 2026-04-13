@@ -1,0 +1,186 @@
+[
+  {
+    "id": "t-01",
+    "entity_id": "e-steve-witkoff",
+    "date": "1997",
+    "date_precision": "year",
+    "event": "Steve Witkoff founds The Witkoff Group, building the real estate empire that later entangles with Trump diplomacy",
+    "source_ids": ["src-wikipedia-witkoff"]
+  },
+  {
+    "id": "t-02",
+    "entity_id": "e-caplan",
+    "date": "2017",
+    "date_precision": "year",
+    "event": "Corey Caplan co-founds Dolomite, the DeFi lending platform he later uses to funnel $75M from WLF depositors",
+    "source_ids": ["src-coindesk-dolomite"]
+  },
+  {
+    "id": "t-03",
+    "entity_id": "e-sun",
+    "date": "2017",
+    "date_precision": "year",
+    "event": "Justin Sun founds TRON blockchain — later integrated with WLF's USD1 stablecoin after his $75M investment",
+    "source_ids": ["src-wikipedia-sun"]
+  },
+  {
+    "id": "t-04",
+    "entity_id": "e-peng",
+    "date": "2018",
+    "date_precision": "year",
+    "event": "Sandy Peng serves as director of Emerdata Limited, the Cambridge Analytica successor — later becomes WLF advisor",
+    "source_ids": ["src-newstracs-emerdata"]
+  },
+  {
+    "id": "t-05",
+    "entity_id": "e-herro",
+    "date": "2023",
+    "date_precision": "year",
+    "event": "Chase Herro and Zak Folkman co-found Dough Finance — hacked for $2.1M, code later stolen for WLF",
+    "source_ids": ["src-coindesk-hack"]
+  },
+  {
+    "id": "t-06",
+    "entity_id": "o-wlf",
+    "date": "2024",
+    "date_precision": "year",
+    "event": "World Liberty Financial launches. Trump named 'Chief Crypto Advocate.' Family controls 75% of governance tokens via DT Marks DEFI LLC",
+    "source_ids": ["src-wikipedia-wlf"]
+  },
+  {
+    "id": "t-07",
+    "entity_id": "e-donald-trump",
+    "date": "2024",
+    "date_precision": "year",
+    "event": "Donald Trump designated Chief Crypto Advocate of WLF — the sitting President's family now runs a crypto exchange",
+    "source_ids": ["src-wikipedia-wlf"]
+  },
+  {
+    "id": "t-08",
+    "entity_id": "e-herro",
+    "date": "2024-09-03",
+    "date_precision": "day",
+    "event": "NYT/CoinDesk investigate WLF founders — expose Herro's criminal record, Folkman's pickup-artist past, Dough Finance hack",
+    "source_ids": ["src-nyt-crypto-punks", "src-coindesk-hack"]
+  },
+  {
+    "id": "t-09",
+    "entity_id": "e-sun",
+    "date": "2024",
+    "date_precision": "year",
+    "event": "Justin Sun invests $75M+ in WLF tokens — becomes largest external investor. His SEC fraud case is still pending",
+    "source_ids": ["src-wikipedia-sun", "src-wikipedia-wlf"]
+  },
+  {
+    "id": "t-10",
+    "entity_id": "e-zach-witkoff",
+    "date": "2024-12-15",
+    "date_precision": "day",
+    "event": "Zach Witkoff names newborn son 'Don James' after Donald Trump — the loyalty signal before the inauguration payoff",
+    "source_ids": ["src-forward-witkoff-baby"]
+  },
+  {
+    "id": "t-11",
+    "entity_id": "e-tahnoun",
+    "date": "2025-01",
+    "date_precision": "month",
+    "event": "Sheikh Tahnoun secretly buys 49% of WLF for $500M via Aryam Investment — signed days before inauguration. $187M goes to Trump entities",
+    "source_ids": ["src-wsj-spy-sheikh", "src-cnbc-spy-sheikh"]
+  },
+  {
+    "id": "t-12",
+    "entity_id": "e-donald-trump",
+    "date": "2025-01-20",
+    "date_precision": "day",
+    "event": "Trump inaugurated as 47th President. Appoints Steve Witkoff as Special Envoy to the Middle East — WLF co-founder now negotiates with WLF's investors",
+    "source_ids": ["src-wikipedia-witkoff"]
+  },
+  {
+    "id": "t-13",
+    "entity_id": "e-steve-witkoff",
+    "date": "2025-01",
+    "date_precision": "month",
+    "event": "Steve Witkoff becomes US envoy without divesting from WLF or Witkoff Group. $31M from Tahnoun deal flows to Witkoff entities",
+    "source_ids": ["src-wsj-spy-sheikh", "src-forbes-witkoff-enriched"]
+  },
+  {
+    "id": "t-14",
+    "entity_id": "e-sun",
+    "date": "2025-02",
+    "date_precision": "month",
+    "event": "SEC quietly drops civil fraud case against Justin Sun — one month after Trump takes office, after Sun's $75M WLF investment",
+    "source_ids": ["src-wikipedia-sun"]
+  },
+  {
+    "id": "t-15",
+    "entity_id": "o-wlf",
+    "date": "2025",
+    "date_precision": "year",
+    "event": "WLF integrates USD1 stablecoin into TRON — Sun's own blockchain. Advisor's platform adopted, creating circular value flows",
+    "source_ids": ["src-wikipedia-wlf"]
+  },
+  {
+    "id": "t-16",
+    "entity_id": "o-mgx",
+    "date": "2025",
+    "date_precision": "year",
+    "event": "Tahnoun's MGX uses $2B in WLF's USD1 stablecoin for Binance deal — UAE state money laundered through Trump's crypto platform",
+    "source_ids": ["src-wsj-spy-sheikh"]
+  },
+  {
+    "id": "t-17",
+    "entity_id": "c-uae",
+    "date": "2025",
+    "date_precision": "year",
+    "event": "Trump admin approves giving UAE access to 500,000 advanced AI chips/year — months after Tahnoun's secret $500M WLF purchase",
+    "source_ids": ["src-wsj-spy-sheikh"]
+  },
+  {
+    "id": "t-18",
+    "entity_id": "o-wlf",
+    "date": "2025",
+    "date_precision": "year",
+    "event": "WLF partners with AB DAO, whose flagship project involves individuals later sanctioned for human trafficking ties",
+    "source_ids": ["src-coindesk-sanctions"]
+  },
+  {
+    "id": "t-19",
+    "entity_id": "e-zanker",
+    "date": "2025",
+    "date_precision": "year",
+    "event": "$TRUMP memecoin launches — Fight Fight Fight LLC + CIC Digital hold 80% of tokens. Generates $350M in fees",
+    "source_ids": ["src-wikipedia-trump-coin", "src-theblock-zanker"]
+  },
+  {
+    "id": "t-20",
+    "entity_id": "c-pakistan",
+    "date": "2026-03",
+    "date_precision": "month",
+    "event": "Pakistan signs stablecoin deal with Zach Witkoff's company — envoy's son profits from countries his father negotiates with",
+    "source_ids": ["src-reuters-pakistan"]
+  },
+  {
+    "id": "t-21",
+    "entity_id": "o-ab-dao",
+    "date": "2026-04-07",
+    "date_precision": "day",
+    "event": "AB DAO faces scrutiny — WLF partner linked to sanctioned Cambodian Prince Group human trafficking network",
+    "source_ids": ["src-coindesk-sanctions"]
+  },
+  {
+    "id": "t-22",
+    "entity_id": "o-fff",
+    "date": "2026-04-08",
+    "date_precision": "day",
+    "event": "Senate Banking Committee (Warren, Schiff, Blumenthal) sends inquiry letter to Fight Fight Fight LLC about $TRUMP memecoin",
+    "source_ids": ["src-senate-letter"]
+  },
+  {
+    "id": "t-23",
+    "entity_id": "o-wlf",
+    "date": "2026-04-09",
+    "date_precision": "day",
+    "event": "WLF borrows $75M from Dolomite (CTO Caplan's own protocol) by pledging 5B WLFI tokens — drains USD1 pool, traps depositors. FTX comparisons emerge",
+    "source_ids": ["src-coindesk-dolomite", "src-gizmodo-ftx"]
+  }
+]

@@ -1,0 +1,409 @@
+[
+  {
+    "id": "e-herro",
+    "slug": "chase-herro",
+    "name": "Chase Herro",
+    "type": "person",
+    "bio": "Self-described 'dirtbag of the internet' with prison stints for drug-related charges and theft convictions. Co-founded Dough Finance, a DeFi platform hacked for $2.1 million and subject to civil fraud litigation in Miami federal court. Previously ran Pacer Capital, a crypto trading platform. He and Folkman collected at least $65 million from World Liberty Financial.",
+    "role": "Co-founder, WLF — Data & Strategies Lead",
+    "one_liner": "Criminal record, $2.1M hack, collected $65M from WLF",
+    "photo_url": null
+  },
+  {
+    "id": "e-folkman",
+    "slug": "zak-folkman",
+    "name": "Zak Folkman",
+    "type": "person",
+    "bio": "Formerly operated 'Date Hotter Girls LLC,' a pick-up artist advice company teaching men to 'Become the Ultimate Alpha Male.' Co-founded Dough Finance with Chase Herro (the hacked DeFi protocol). WLFI's early codebase was found to have directly lifted code from Dough Finance. History of failed internet ventures.",
+    "role": "Co-founder, WLF — Head of Operations",
+    "one_liner": "Pick-up artist turned crypto operator, collected $65M from WLF",
+    "photo_url": null
+  },
+  {
+    "id": "e-zach-witkoff",
+    "slug": "zach-witkoff",
+    "name": "Zach Witkoff",
+    "type": "person",
+    "bio": "Son of Steve Witkoff (Trump's Middle East envoy). Married at Mar-a-Lago in 2022 with Trump in attendance. Named his newborn son 'Don James' after Donald Trump in December 2024. Negotiated the Pakistan stablecoin deal. Applied for a U.S. national banking license for World Liberty Trust in January 2026.",
+    "role": "Co-founder, WLF — President of World Liberty Trust",
+    "one_liner": "Envoy's son, named his baby after Trump, negotiated Pakistan deal",
+    "photo_url": null
+  },
+  {
+    "id": "e-alex-witkoff",
+    "slug": "alex-witkoff",
+    "name": "Alex Witkoff",
+    "type": "person",
+    "bio": "Took over the Witkoff Group when his father Steve became Middle East envoy. While his father negotiated with Middle Eastern governments, Alex solicited several of the same governments for billions in investment into his enterprises, including WLF.",
+    "role": "Co-founder, WLF — CEO of Witkoff Group",
+    "one_liner": "Solicited Gulf investments while dad negotiated as envoy",
+    "photo_url": null
+  },
+  {
+    "id": "e-steve-witkoff",
+    "slug": "steve-witkoff",
+    "name": "Steve Witkoff",
+    "type": "person",
+    "bio": "New York real estate mogul who founded the Witkoff Group in 1997. Met Trump in 1986; longtime personal friend and business associate. Donated $2+ million to Trump's political action groups. Key Trump campaign fundraiser. Has not fully divested from the Witkoff Group or WLF while serving as US Special Envoy to the Middle East. Forbes reported he 'substantially enriched himself' during his tenure as envoy.",
+    "role": "Co-Founder Emeritus, WLF — US Special Envoy to the Middle East",
+    "one_liner": "US envoy who hasn't divested from WLF, $2M+ to Trump PACs",
+    "photo_url": null
+  },
+  {
+    "id": "e-sun",
+    "slug": "justin-sun",
+    "name": "Justin Sun",
+    "type": "person",
+    "bio": "Chinese-born, now citizen of St. Kitts and Nevis. Founder of TRON blockchain. Largest known external WLF investor at $75M+ in WLFI tokens. SEC civil fraud case was quietly dropped in February 2025, shortly after Trump took office and after Sun invested $75M in WLF. Former Ambassador and Permanent Representative of Grenada to the WTO (2021-2023). WLF integrated its USD1 stablecoin into Sun's TRON blockchain.",
+    "role": "WLF Advisor — Largest external investor ($75M+)",
+    "one_liner": "SEC case dropped after $75M WLF investment, TRON founder",
+    "photo_url": null
+  },
+  {
+    "id": "e-caplan",
+    "slug": "corey-caplan",
+    "name": "Corey Caplan",
+    "type": "person",
+    "bio": "Early Ethereum builder since 2017. Co-founded Dolomite, a DeFi lending/margin trading platform on Arbitrum. WLF pledged 5 billion WLFI tokens on Dolomite (Caplan's own protocol) to borrow $75 million in stablecoins, draining the USD1 pool and trapping depositors. Over $40 million was sent to Coinbase Prime. Critics compared it to FTX-style self-dealing.",
+    "role": "CTO, WLF — Co-founder of Dolomite",
+    "one_liner": "WLF's CTO borrowed $75M from his own protocol, trapping depositors",
+    "photo_url": null
+  },
+  {
+    "id": "e-peng",
+    "slug": "sandy-peng",
+    "name": "Sandy Peng",
+    "type": "person",
+    "bio": "Director of Emerdata Limited (2018), the successor company to Cambridge Analytica. Previously worked at companies run by Johnson Chun Shun Ko, who was also an Emerdata director and a business partner of Erik Prince (Blackwater founder). Ko ran Frontier Services Group, a majority Chinese state-owned military/security contractor. Co-founder of Scroll (Ethereum Layer-2). CEO of Coinage Labs, which listed Cambridge Analytica as a partner.",
+    "role": "WLF Advisor — Co-founder of Scroll",
+    "one_liner": "Cambridge Analytica successor director, Erik Prince connections",
+    "photo_url": null
+  },
+  {
+    "id": "e-zanker",
+    "slug": "bill-zanker",
+    "name": "Bill Zanker",
+    "type": "person",
+    "bio": "Operates Fight Fight Fight LLC, the entity that controls the $TRUMP memecoin. Longtime Trump business associate who co-wrote a book with Trump in 2008. Fight Fight Fight LLC and CIC Digital LLC (a Trump Organization affiliate) hold 80% of all $TRUMP tokens (800 million of 1 billion). The token has generated $350 million in fees. Planning a $200 million fundraise for a 'digital asset treasury company.' Subject of Senate inquiry letters from Warren, Schiff, and Blumenthal.",
+    "role": "Operator of $TRUMP coin — Fight Fight Fight LLC",
+    "one_liner": "$350M in memecoin fees, subject of Senate inquiry",
+    "photo_url": null
+  },
+  {
+    "id": "e-tahnoun",
+    "slug": "tahnoun-bin-zayed",
+    "name": "Sheikh Tahnoun bin Zayed Al Nahyan",
+    "type": "person",
+    "bio": "UAE royal family member and National Security Advisor of the UAE, known as 'The Spy Sheikh' for his intelligence role. Purchased 49% of WLF for $500 million via Aryam Investment, signed days before Trump's January 2025 inauguration. $187 million was paid immediately to Trump family entities; at least $31 million went to Witkoff-connected entities. The deal was not disclosed by WLF. Months after this purchase, the Trump administration approved giving the UAE access to 500,000 advanced AI chips per year.",
+    "role": "Secret 49% owner of WLF — UAE National Security Advisor",
+    "one_liner": "Secret $500M stake, UAE spy chief, AI chip deal followed",
+    "photo_url": null
+  },
+  {
+    "id": "e-pearson",
+    "slug": "luke-pearson",
+    "name": "Luke Pearson",
+    "type": "person",
+    "bio": "General Partner at Polychain Capital, a major crypto VC fund, since 2021. Researcher in zero-knowledge cryptography since 2017.",
+    "role": "WLF Advisor — GP at Polychain Capital",
+    "one_liner": "Polychain Capital GP, ZK cryptography researcher",
+    "photo_url": null
+  },
+  {
+    "id": "e-yakobi",
+    "slug": "rafael-yakobi",
+    "name": "Rafael Yakobi",
+    "type": "person",
+    "bio": "Managing Partner at The Crypto Lawyers, a crypto-focused law firm providing legal counsel to the crypto industry.",
+    "role": "WLF Advisor — Managing Partner, The Crypto Lawyers",
+    "one_liner": "Crypto industry lawyer advising WLF",
+    "photo_url": null
+  },
+  {
+    "id": "c-uae",
+    "slug": "uae",
+    "name": "United Arab Emirates",
+    "type": "country",
+    "bio": "The UAE, through entities connected to Sheikh Tahnoun bin Zayed Al Nahyan (National Security Advisor), purchased a secret 49% stake in WLF for $500 million. MGX, an Abu Dhabi state-backed company led by Tahnoun, used $2 billion in WLF's USD1 stablecoin to finance a deal with Binance. The Trump administration subsequently approved giving the UAE access to 500,000 advanced AI chips per year.",
+    "role": "Foreign Government",
+    "one_liner": "Secret 49% WLF stake via spy chief, $2B USD1 deal, AI chip access"
+  },
+  {
+    "id": "c-israel",
+    "slug": "israel",
+    "name": "Israel",
+    "type": "country",
+    "bio": "Steve Witkoff, WLF co-founder emeritus and US Special Envoy, is central to Israel-Hamas ceasefire negotiations. His dual role as diplomat and WLF stakeholder creates a conflict of interest as he negotiates with the same regional actors involved in WLF investments.",
+    "role": "Foreign Government",
+    "one_liner": "Witkoff negotiates ceasefire while profiting from WLF"
+  },
+  {
+    "id": "c-saudi",
+    "slug": "saudi-arabia",
+    "name": "Saudi Arabia",
+    "type": "country",
+    "bio": "Steve Witkoff is pushing Saudi-Israel normalization as part of his envoy role. The Witkoff family has solicited Gulf state investments while Steve serves as envoy, creating a direct conflict between diplomatic duties and financial interests.",
+    "role": "Foreign Government",
+    "one_liner": "Witkoff pushes normalization while family solicits Gulf investments"
+  },
+  {
+    "id": "c-qatar",
+    "slug": "qatar",
+    "name": "Qatar",
+    "type": "country",
+    "bio": "The Qatari Investment Authority purchased the Witkoff Group's Park Lane Hotel in Manhattan for $623 million. Qatar targeted Witkoff in lobbying campaigns. The financial relationship predates and overlaps with Witkoff's roles in both WLF and as US envoy.",
+    "role": "Foreign Government",
+    "one_liner": "$623M hotel deal with Witkoff, lobbying connections"
+  },
+  {
+    "id": "c-pakistan",
+    "slug": "pakistan",
+    "name": "Pakistan",
+    "type": "country",
+    "bio": "Pakistan's government signed an agreement with SC Financial Technologies (Zach Witkoff's company) to use the USD1 stablecoin for cross-border payments. The deal was negotiated by Zach Witkoff while his father Steve served as US Special Envoy to the Middle East.",
+    "role": "Foreign Government",
+    "one_liner": "Stablecoin deal with envoy's son's company"
+  },
+  {
+    "id": "c-china",
+    "slug": "china",
+    "name": "China",
+    "type": "country",
+    "bio": "Justin Sun was born in China but reportedly cannot return due to falling out with the CCP. Sandy Peng has connections to Chinese state interests through Frontier Services Group (majority owned by CITIC Group, a Chinese state-owned enterprise) and Johnson Chun Shun Ko.",
+    "role": "Foreign Government",
+    "one_liner": "Justin Sun's origin, Sandy Peng's state enterprise connections"
+  },
+  {
+    "id": "c-cambodia",
+    "slug": "cambodia",
+    "name": "Cambodia",
+    "type": "country",
+    "bio": "WLF partnered with AB DAO, whose flagship project involved individuals later sanctioned by the US and UK as part of a crackdown on Cambodia's Prince Group, described by US authorities as a 'major transnational criminal network' linked to human trafficking.",
+    "role": "Foreign Government",
+    "one_liner": "WLF partner linked to sanctioned human trafficking network"
+  },
+  {
+    "id": "o-wlf",
+    "slug": "world-liberty-financial",
+    "name": "World Liberty Financial",
+    "type": "organization",
+    "bio": "Trump family crypto venture launched in 2024. Sells WLFI governance tokens. Issues USD1 stablecoin. 49% secretly owned by UAE's Sheikh Tahnoun. CTO borrowed $75M from his own protocol. Connected to sanctioned Cambodian network.",
+    "role": "Trump Family Crypto Venture",
+    "one_liner": "Trump crypto empire, $500M secret UAE stake"
+  },
+  {
+    "id": "o-dough",
+    "slug": "dough-finance",
+    "name": "Dough Finance",
+    "type": "company",
+    "bio": "DeFi platform co-founded by Chase Herro and Zak Folkman. Hacked for $2.1 million. Subject to civil fraud litigation in Miami federal court. WLF's early codebase was found to have directly lifted code from Dough Finance.",
+    "role": "Predecessor DeFi Platform (hacked)",
+    "one_liner": "Hacked for $2.1M, code stolen by WLF"
+  },
+  {
+    "id": "o-dolomite",
+    "slug": "dolomite",
+    "name": "Dolomite",
+    "type": "company",
+    "bio": "DeFi lending/margin trading platform on Arbitrum co-founded by Corey Caplan (WLF's CTO). WLF pledged 5 billion WLFI tokens on Dolomite to borrow $75 million, draining the USD1 pool and trapping depositors.",
+    "role": "DeFi Platform (CTO conflict of interest)",
+    "one_liner": "WLF CTO's own protocol, $75M self-dealing"
+  },
+  {
+    "id": "o-fff",
+    "slug": "fight-fight-fight-llc",
+    "name": "Fight Fight Fight LLC",
+    "type": "company",
+    "bio": "Entity that controls the $TRUMP memecoin, operated by Bill Zanker. Along with CIC Digital LLC (Trump Organization affiliate), holds 80% of all $TRUMP tokens. Generated $350 million in fees. Subject of Senate Banking Committee inquiry.",
+    "role": "$TRUMP Memecoin Operator",
+    "one_liner": "$350M in fees, 80% token control, Senate inquiry"
+  },
+  {
+    "id": "o-emerdata",
+    "slug": "emerdata",
+    "name": "Emerdata Limited",
+    "type": "company",
+    "bio": "Successor company to Cambridge Analytica. Sandy Peng served as director in 2018. Connected to Erik Prince (Blackwater) through Johnson Chun Shun Ko, who was also an Emerdata director.",
+    "role": "Cambridge Analytica Successor",
+    "one_liner": "Cambridge Analytica lives on in WLF's advisory network"
+  },
+  {
+    "id": "o-frontier",
+    "slug": "frontier-services-group",
+    "name": "Frontier Services Group",
+    "type": "company",
+    "bio": "Military/security contractor majority owned by CITIC Group (Chinese state-owned enterprise). Led by Erik Prince (Blackwater founder) and Johnson Chun Shun Ko. Connected to Sandy Peng through Ko's network of companies.",
+    "role": "Chinese State Military Contractor",
+    "one_liner": "Erik Prince + Chinese state ownership, linked to WLF advisor"
+  },
+  {
+    "id": "o-witkoff-group",
+    "slug": "witkoff-group",
+    "name": "The Witkoff Group",
+    "type": "company",
+    "bio": "Real estate empire founded by Steve Witkoff in 1997. Now run by son Alex Witkoff. Sold Park Lane Hotel to Qatari Investment Authority for $623 million. Steve has not fully divested while serving as US envoy.",
+    "role": "Witkoff Family Real Estate Empire",
+    "one_liner": "$623M Qatar hotel deal, envoy hasn't divested"
+  },
+  {
+    "id": "o-tron",
+    "slug": "tron",
+    "name": "TRON",
+    "type": "organization",
+    "bio": "Blockchain platform founded by Justin Sun. WLF integrated its USD1 stablecoin into TRON and added TRON tokens to its portfolio while Sun served as advisor, creating circular value flows.",
+    "role": "Justin Sun's Blockchain Platform",
+    "one_liner": "WLF adopted advisor's blockchain, circular value flows"
+  },
+  {
+    "id": "o-mgx",
+    "slug": "mgx",
+    "name": "MGX",
+    "type": "company",
+    "bio": "Abu Dhabi state-backed investment company led by Sheikh Tahnoun. Used $2 billion in WLF's USD1 stablecoin to finance a deal with Binance.",
+    "role": "Abu Dhabi State Investment Vehicle",
+    "one_liner": "$2B USD1 stablecoin deal with Binance"
+  },
+  {
+    "id": "o-ab-dao",
+    "slug": "ab-dao",
+    "name": "AB DAO",
+    "type": "organization",
+    "bio": "WLF partner whose flagship project involved individuals later sanctioned by the US and UK. Part of Cambodia's Prince Group network, described by US authorities as a 'major transnational criminal network' linked to human trafficking.",
+    "role": "WLF Partner — Sanctioned Network",
+    "one_liner": "Linked to sanctioned human trafficking network"
+  },
+  {
+    "id": "o-scroll",
+    "slug": "scroll",
+    "name": "Scroll",
+    "type": "organization",
+    "bio": "Ethereum Layer-2 blockchain co-founded by Sandy Peng. Hosts WLF's blockchain application.",
+    "role": "Sandy Peng's L2 Blockchain",
+    "one_liner": "WLF advisor's blockchain platform"
+  },
+  {
+    "id": "o-polychain",
+    "slug": "polychain-capital",
+    "name": "Polychain Capital",
+    "type": "company",
+    "bio": "Major crypto venture capital fund. Luke Pearson serves as General Partner since 2021.",
+    "role": "Crypto VC Fund",
+    "one_liner": "Major crypto VC, WLF advisor's employer"
+  },
+  {
+    "id": "e-donald-trump",
+    "slug": "donald-trump",
+    "name": "Donald Trump",
+    "type": "person",
+    "bio": "45th and 47th President of the United States. Named 'Chief Crypto Advocate' of World Liberty Financial. The Trump Organization affiliate CIC Digital LLC and Fight Fight Fight LLC hold 80% of $TRUMP memecoin tokens. His family collectively controls WLF through DT Marks DEFI LLC, which received 22.5 billion WLFI governance tokens (75% of total supply). $187 million from Sheikh Tahnoun's secret $500M WLF stake went directly to Trump family entities.",
+    "role": "Chief Crypto Advocate, WLF — 47th President of the United States",
+    "one_liner": "$187M from secret UAE deal, 75% governance token control, $350M memecoin",
+    "photo_url": null
+  },
+  {
+    "id": "e-eric-trump",
+    "slug": "eric-trump",
+    "name": "Eric Trump",
+    "type": "person",
+    "bio": "Son of Donald Trump and Executive Vice President of the Trump Organization. Designated 'Web3 Ambassador' for World Liberty Financial. Actively promotes WLF on social media and at crypto conferences. Part of the Trump family structure that controls WLF through DT Marks DEFI LLC.",
+    "role": "Web3 Ambassador, WLF — EVP Trump Organization",
+    "one_liner": "WLF's public face in crypto, Trump Organization exec",
+    "photo_url": null
+  },
+  {
+    "id": "e-don-jr",
+    "slug": "donald-trump-jr",
+    "name": "Donald Trump Jr.",
+    "type": "person",
+    "bio": "Eldest son of Donald Trump. Designated 'Web3 Ambassador' alongside his brother Eric for World Liberty Financial. Part of the Trump family structure that controls WLF through DT Marks DEFI LLC. Actively promotes WLF and Trump-branded crypto ventures.",
+    "role": "Web3 Ambassador, WLF — Trump Organization exec",
+    "one_liner": "WLF promoter, part of family's 75% governance token control",
+    "photo_url": null
+  },
+  {
+    "id": "e-barron-trump",
+    "slug": "barron-trump",
+    "name": "Barron Trump",
+    "type": "person",
+    "bio": "Youngest son of Donald Trump. Credited as a 'DeFi visionary' by the family and reportedly the driving force behind the Trump family's entry into crypto. Named as a beneficiary of DT Marks DEFI LLC, the entity that controls 75% of WLF governance tokens.",
+    "role": "DeFi Visionary, WLF — Beneficiary of DT Marks DEFI LLC",
+    "one_liner": "Reportedly drove Trump family into crypto, DT Marks beneficiary",
+    "photo_url": null
+  },
+  {
+    "id": "e-dulub",
+    "slug": "alexei-dulub",
+    "name": "Alexei Dulub",
+    "type": "person",
+    "bio": "Founder of Web3 Antivirus, a browser extension that detects malicious smart contracts and phishing sites. Also founder of PixelPlex, a blockchain and software development company. Named as advisor to World Liberty Financial.",
+    "role": "WLF Advisor — Founder of Web3 Antivirus & PixelPlex",
+    "one_liner": "Web3 security founder advising WLF",
+    "photo_url": null
+  },
+  {
+    "id": "e-ogle",
+    "slug": "ogle",
+    "name": "Ogle",
+    "type": "person",
+    "bio": "Pseudonymous key advisor to World Liberty Financial. Co-founder of Glue, a blockchain project. One of the more mysterious figures in the WLF advisory circle, operating under a single pseudonym with limited public biographical information.",
+    "role": "Key WLF Advisor — Co-founder of Glue blockchain",
+    "one_liner": "Pseudonymous advisor, Glue blockchain co-founder",
+    "photo_url": null
+  },
+  {
+    "id": "e-fang",
+    "slug": "ryan-fang",
+    "name": "Ryan Fang",
+    "type": "person",
+    "bio": "Founder of Tomo Wallet, a crypto wallet platform. Co-founder of Ankr, a Web3 infrastructure provider offering decentralized node hosting and RPC services. Named as advisor to World Liberty Financial.",
+    "role": "WLF Advisor — Founder of Tomo Wallet, Co-founder of Ankr",
+    "one_liner": "Ankr co-founder and Tomo Wallet founder advising WLF",
+    "photo_url": null
+  },
+  {
+    "id": "e-morgan",
+    "slug": "matt-l-morgan",
+    "name": "Matt L Morgan",
+    "type": "person",
+    "bio": "CEO of Mixie Studios, a digital media and Web3 entertainment company. Named as advisor to World Liberty Financial.",
+    "role": "WLF Advisor — CEO of Mixie Studios",
+    "one_liner": "Mixie Studios CEO advising WLF",
+    "photo_url": null
+  },
+  {
+    "id": "o-pixelplex",
+    "slug": "pixelplex",
+    "name": "PixelPlex",
+    "type": "company",
+    "bio": "Blockchain and software development company founded by Alexei Dulub. Also operates Web3 Antivirus, a browser extension for detecting malicious smart contracts.",
+    "role": "Blockchain Dev Company",
+    "one_liner": "Dulub's dev shop, also runs Web3 Antivirus"
+  },
+  {
+    "id": "o-glue",
+    "slug": "glue",
+    "name": "Glue",
+    "type": "organization",
+    "bio": "Blockchain project co-founded by pseudonymous WLF advisor Ogle.",
+    "role": "Blockchain Project",
+    "one_liner": "Pseudonymous advisor Ogle's blockchain"
+  },
+  {
+    "id": "o-ankr",
+    "slug": "ankr",
+    "name": "Ankr",
+    "type": "company",
+    "bio": "Web3 infrastructure provider offering decentralized node hosting and RPC services. Co-founded by Ryan Fang, a WLF advisor.",
+    "role": "Web3 Infrastructure Provider",
+    "one_liner": "Decentralized infra, co-founded by WLF advisor"
+  },
+  {
+    "id": "o-mixie",
+    "slug": "mixie-studios",
+    "name": "Mixie Studios",
+    "type": "company",
+    "bio": "Digital media and Web3 entertainment company led by CEO Matt L Morgan, a WLF advisor.",
+    "role": "Web3 Entertainment Company",
+    "one_liner": "WLF advisor Morgan's entertainment studio"
+  }
+]

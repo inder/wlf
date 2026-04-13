@@ -1,0 +1,162 @@
+[
+  {
+    "id": "src-nyt-crypto-punks",
+    "url": "https://www.seattletimes.com/business/the-crypto-punks-behind-trumps-murky-new-business-venture/",
+    "title": "The 'Crypto Punks' Behind Trump's Murky New Business Venture",
+    "publisher": "NYT/Seattle Times",
+    "date": "2024-09-03",
+    "tier": "major_publication",
+    "excerpt": "Investigation into Chase Herro and Zak Folkman's backgrounds"
+  },
+  {
+    "id": "src-coindesk-dolomite",
+    "url": "https://www.coindesk.com/markets/2026/04/09/trump-s-world-liberty-financial-borrows-usd75-million-against-its-own-token-trapping-depositors-on-dolomite",
+    "title": "Trump's WLF Borrows $75M Against Its Own Token, Trapping Depositors",
+    "publisher": "CoinDesk",
+    "date": "2026-04-09",
+    "tier": "major_publication",
+    "excerpt": "WLF pledged 5 billion WLFI tokens on Dolomite to borrow $75 million in stablecoins"
+  },
+  {
+    "id": "src-wsj-spy-sheikh",
+    "url": "https://www.theblock.co/post/387931/uae-sheikh-secretly-acquired-49-of-trumps-world-liberty-financial-days-before-inauguration-wsj",
+    "title": "'Spy Sheikh' Bought Secret Stake in Trump Company",
+    "publisher": "WSJ/The Block",
+    "date": "2026-02-01",
+    "tier": "major_publication",
+    "excerpt": "Tahnoun bin Zayed Al Nahyan acquired 49% of WLF for $500 million"
+  },
+  {
+    "id": "src-coindesk-hack",
+    "url": "https://www.coindesk.com/business/2024/09/03/inside-the-trump-crypto-project-linked-to-a-2m-defi-hack-and-former-pick-up-artist",
+    "title": "Inside the Trump Crypto Project Linked to a $2M DeFi Hack",
+    "publisher": "CoinDesk",
+    "date": "2024-09-03",
+    "tier": "major_publication",
+    "excerpt": "Dough Finance hacked for $2.1 million; co-founded by Herro and Folkman"
+  },
+  {
+    "id": "src-newstracs-emerdata",
+    "url": "https://newstracs.com/cambridge-analytica-emerdata-former-director-linked-to-trump-crypto-project/2024/11/15/",
+    "title": "Cambridge Analytica/Emerdata Former Director Linked to Trump Crypto",
+    "publisher": "NewsTRACS",
+    "date": "2024-11-15",
+    "tier": "specialist",
+    "excerpt": "Sandy Peng served as director of Emerdata Limited, successor to Cambridge Analytica"
+  },
+  {
+    "id": "src-wikipedia-wlf",
+    "url": "https://en.wikipedia.org/wiki/World_Liberty_Financial",
+    "title": "World Liberty Financial",
+    "publisher": "Wikipedia",
+    "date": "2026-04-12",
+    "tier": "specialist"
+  },
+  {
+    "id": "src-wikipedia-witkoff",
+    "url": "https://en.wikipedia.org/wiki/Steve_Witkoff",
+    "title": "Steve Witkoff",
+    "publisher": "Wikipedia",
+    "date": "2026-04-12",
+    "tier": "specialist"
+  },
+  {
+    "id": "src-revolving-door-witkoff",
+    "url": "https://therevolvingdoorproject.org/billionaires-and-the-trump-admin-steve-witkoff/",
+    "title": "Billionaires and the Trump Admin: Steve Witkoff",
+    "publisher": "Revolving Door Project",
+    "date": "2025-01-15",
+    "tier": "specialist",
+    "excerpt": "Witkoff donated $2M+ to Trump PACs"
+  },
+  {
+    "id": "src-wikipedia-sun",
+    "url": "https://en.wikipedia.org/wiki/Justin_Sun",
+    "title": "Justin Sun",
+    "publisher": "Wikipedia",
+    "date": "2026-04-12",
+    "tier": "specialist"
+  },
+  {
+    "id": "src-gizmodo-ftx",
+    "url": "https://gizmodo.com/trumps-world-liberty-financial-makes-ftx-esque-move-borrows-against-its-own-crypto-token-2000745326",
+    "title": "Trump's WLF Makes FTX-esque Move",
+    "publisher": "Gizmodo",
+    "date": "2026-04-10",
+    "tier": "specialist"
+  },
+  {
+    "id": "src-forbes-witkoff-enriched",
+    "url": "https://www.forbes.com",
+    "title": "How Peace Envoy Steve Witkoff Got Richer",
+    "publisher": "Forbes",
+    "date": "2026-04-01",
+    "tier": "major_publication",
+    "excerpt": "Witkoff substantially enriched himself during his tenure as envoy"
+  },
+  {
+    "id": "src-reuters-pakistan",
+    "url": "https://www.dawn.com/news/1966922/pakistan-signs-mou-with-donald-trump-linked-world-liberty-finance",
+    "title": "Pakistan Signs MoU with Trump-Linked World Liberty Financial",
+    "publisher": "Dawn/Reuters",
+    "date": "2026-03-01",
+    "tier": "major_publication"
+  },
+  {
+    "id": "src-senate-letter",
+    "url": "https://www.banking.senate.gov/imo/media/doc/20260408_warren_schiff_blumenthal_letter_to_fff_llc_re_trump_memecoin_conferencepdf.pdf",
+    "title": "Senate Letter to Fight Fight Fight LLC re: Trump Memecoin",
+    "publisher": "US Senate Banking Committee",
+    "date": "2026-04-08",
+    "tier": "official"
+  },
+  {
+    "id": "src-coindesk-sanctions",
+    "url": "https://www.coindesk.com/business/2026/04/07/trump-linked-world-liberty-faces-scrutiny-over-ties-to-sanctioned-network-the-times",
+    "title": "WLF Faces Scrutiny Over Ties to Sanctioned Network",
+    "publisher": "CoinDesk",
+    "date": "2026-04-07",
+    "tier": "major_publication",
+    "excerpt": "WLF partnered with AB DAO linked to sanctioned Cambodian Prince Group"
+  },
+  {
+    "id": "src-forward-witkoff-baby",
+    "url": "https://forward.com/fast-forward/682963/grandson-steve-witkoff-donald-trump/",
+    "title": "Newborn Grandson of Steve Witkoff Named After Trump",
+    "publisher": "The Forward",
+    "date": "2024-12-15",
+    "tier": "major_publication"
+  },
+  {
+    "id": "src-cnbc-spy-sheikh",
+    "url": "https://www.cnbc.com/2026/02/01/spy-sheikh-stake-trump-crypto.html",
+    "title": "UAE 'Spy Sheikh' Bought Secret 49% Stake",
+    "publisher": "CNBC",
+    "date": "2026-02-01",
+    "tier": "major_publication"
+  },
+  {
+    "id": "src-theblock-zanker",
+    "url": "https://www.theblock.co/post/373745/trump-memecoin-issuer-plans-funding",
+    "title": "Trump Memecoin Issuer Plans $200M Digital Asset Treasury",
+    "publisher": "The Block",
+    "date": "2026-03-15",
+    "tier": "major_publication"
+  },
+  {
+    "id": "src-wikipedia-trump-coin",
+    "url": "https://en.wikipedia.org/wiki/$Trump",
+    "title": "$Trump",
+    "publisher": "Wikipedia",
+    "date": "2026-04-12",
+    "tier": "specialist"
+  },
+  {
+    "id": "src-fortune-inner-circle",
+    "url": "https://fortune.com/crypto/2025/08/21/world-liberty-financial-trump-tower-zak-folkman-chase-herro/",
+    "title": "Meet Trump's Inner Crypto Circle",
+    "publisher": "Fortune",
+    "date": "2025-08-21",
+    "tier": "major_publication"
+  }
+]
