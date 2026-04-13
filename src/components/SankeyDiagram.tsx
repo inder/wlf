@@ -48,24 +48,24 @@ function buildSankeyData() {
   // d3-sankey doesn't allow cycles. Some relationships form cycles
   // (e.g., Sun -> WLF and WLF -> TRON). We need to detect and break them.
   // Build an adjacency list and do a simple DFS cycle check.
-  const adj = new Map<number, Set<number>>();
-  const links: Array<{ source: number; target: number; value: number; amount_cents: number; description: string }> = [];
+  const adj = new Map<string, Set<string>>();
+  const links: Array<{ source: string; target: string; value: number; amount_cents: number; description: string }> = [];
 
   for (const rel of financialRels) {
-    const srcIdx = nodeIndexMap.get(rel.source_id)!;
-    const tgtIdx = nodeIndexMap.get(rel.target_id)!;
+    const srcId = rel.source_id;
+    const tgtId = rel.target_id;
 
-    if (srcIdx === tgtIdx) continue; // skip self-loops
+    if (srcId === tgtId) continue; // skip self-loops
 
     // Check if adding this edge creates a cycle using simple path check
-    if (wouldCreateCycle(adj, srcIdx, tgtIdx)) continue;
+    if (wouldCreateCycle(adj, srcId, tgtId)) continue;
 
-    if (!adj.has(srcIdx)) adj.set(srcIdx, new Set());
-    adj.get(srcIdx)!.add(tgtIdx);
+    if (!adj.has(srcId)) adj.set(srcId, new Set());
+    adj.get(srcId)!.add(tgtId);
 
     links.push({
-      source: srcIdx,
-      target: tgtIdx,
+      source: srcId,
+      target: tgtId,
       value: rel.amount_cents! / 100, // convert to dollars for sizing
       amount_cents: rel.amount_cents!,
       description: rel.description,
@@ -76,13 +76,13 @@ function buildSankeyData() {
 }
 
 function wouldCreateCycle(
-  adj: Map<number, Set<number>>,
-  from: number,
-  to: number
+  adj: Map<string, Set<string>>,
+  from: string,
+  to: string
 ): boolean {
   // Would adding edge from->to create a cycle?
   // Check if there's already a path from 'to' to 'from'
-  const visited = new Set<number>();
+  const visited = new Set<string>();
   const queue = [to];
   while (queue.length > 0) {
     const current = queue.shift()!;
