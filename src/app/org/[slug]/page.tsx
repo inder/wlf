@@ -6,18 +6,18 @@ import type { Metadata } from 'next';
 
 const ORG_COLORS: Record<string, { bg: string; border: string; text: string; accent: string; indicator: string }> = {
   organization: {
-    bg: 'bg-cyan-950/30',
-    border: 'border-cyan-800/30',
-    text: 'text-cyan-400',
-    accent: 'text-cyan-300',
-    indicator: 'bg-cyan-900/50',
+    bg: 'bg-cyan-50',
+    border: 'border-cyan-200',
+    text: 'text-cyan-700',
+    accent: 'text-cyan-800',
+    indicator: 'bg-cyan-50',
   },
   company: {
-    bg: 'bg-slate-800/30',
-    border: 'border-slate-600/30',
-    text: 'text-slate-400',
-    accent: 'text-slate-300',
-    indicator: 'bg-slate-800/50',
+    bg: 'bg-slate-50',
+    border: 'border-slate-200',
+    text: 'text-slate-600',
+    accent: 'text-slate-800',
+    indicator: 'bg-slate-50',
   },
 };
 
@@ -84,13 +84,13 @@ export default async function OrgPage({
   return (
     <div className="min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50">
+      <nav className="fixed top-0 w-full z-50 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-[#e0dcd4]">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight">
-            WLF<span className="text-orange-500">.</span>investigation
+          <Link href="/" className="text-lg font-bold tracking-tight text-gray-900">
+            WLF<span className="text-red-700">.</span>investigation
           </Link>
           <div className="flex gap-4 text-sm">
-            <Link href="/graph" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/graph" className="text-gray-500 hover:text-gray-900 transition-colors">
               Network Graph
             </Link>
           </div>
@@ -102,25 +102,25 @@ export default async function OrgPage({
           {/* Hero */}
           <div className="mb-10">
             <div className="flex items-start gap-5 mb-4">
-              <div className={`w-20 h-20 rounded-full ${colors.indicator} flex items-center justify-center text-2xl font-bold ${colors.accent} shrink-0`}>
+              <div className={`w-20 h-20 rounded-full ${colors.indicator} border-2 ${colors.border} flex items-center justify-center text-2xl font-bold ${colors.accent} shrink-0`}>
                 {typeLetter}
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-1">
-                  <span className={`text-xs px-2 py-0.5 rounded-full ${colors.bg} ${colors.text} font-medium uppercase tracking-wider`}>
+                  <span className={`text-xs px-2 py-0.5 rounded-sm border ${colors.border} ${colors.bg} ${colors.text} font-medium uppercase tracking-wider`}>
                     {typeLabel}
                   </span>
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold">{entity.name}</h1>
+                <h1 className="font-headline text-3xl md:text-4xl font-bold text-gray-900">{entity.name}</h1>
                 {entity.role && (
-                  <p className="text-gray-400 mt-1">{entity.role}</p>
+                  <p className="text-gray-500 mt-1">{entity.role}</p>
                 )}
                 <p className="text-gray-500 text-sm mt-1">
                   {connections.length} connection{connections.length !== 1 ? 's' : ''}
                   {totalMoney > 0 && (
                     <>
                       {' '}&middot;{' '}
-                      <span className="text-red-400">
+                      <span className="text-red-700">
                         {formatAmount(totalMoney)} in documented flows
                       </span>
                     </>
@@ -128,23 +128,25 @@ export default async function OrgPage({
                 </p>
               </div>
             </div>
-            <div className={`${colors.bg} border ${colors.border} rounded-lg p-4`}>
+            <div className={`${colors.bg} border ${colors.border} rounded-sm p-4`}>
               <p className={`${colors.accent} font-medium`}>{entity.one_liner}</p>
             </div>
           </div>
 
           {/* Bio */}
           <section className="mb-10">
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
               Overview
             </h2>
-            <p className="text-gray-300 leading-relaxed">{entity.bio}</p>
+            <p className="text-gray-700 leading-relaxed">{entity.bio}</p>
           </section>
+
+          <hr className="editorial-rule" />
 
           {/* Financial connections */}
           {financial.length > 0 && (
             <section className="mb-10">
-              <h2 className="text-sm font-semibold text-red-400 uppercase tracking-wider mb-3">
+              <h2 className="text-sm font-semibold text-red-700 uppercase tracking-wider mb-3">
                 Financial Connections ({financial.length})
               </h2>
               <div className="space-y-3">
@@ -162,8 +164,8 @@ export default async function OrgPage({
           {/* Political/Diplomatic connections */}
           {political.length > 0 && (
             <section className="mb-10">
-              <h2 className="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-3">
-                Political & Diplomatic ({political.length})
+              <h2 className="text-sm font-semibold text-blue-700 uppercase tracking-wider mb-3">
+                Political &amp; Diplomatic ({political.length})
               </h2>
               <div className="space-y-3">
                 {political.map(({ relationship, connectedEntity }) => (
@@ -180,8 +182,8 @@ export default async function OrgPage({
           {/* Employment/Advisory */}
           {employment.length > 0 && (
             <section className="mb-10">
-              <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
-                Employment & Advisory ({employment.length})
+              <h2 className="text-sm font-semibold text-cyan-700 uppercase tracking-wider mb-3">
+                Employment &amp; Advisory ({employment.length})
               </h2>
               <div className="space-y-3">
                 {employment.map(({ relationship, connectedEntity }) => (
@@ -198,8 +200,8 @@ export default async function OrgPage({
           {/* Personal & Criminal */}
           {personal.length > 0 && (
             <section className="mb-10">
-              <h2 className="text-sm font-semibold text-green-400 uppercase tracking-wider mb-3">
-                Personal & Criminal ({personal.length})
+              <h2 className="text-sm font-semibold text-green-700 uppercase tracking-wider mb-3">
+                Personal &amp; Criminal ({personal.length})
               </h2>
               <div className="space-y-3">
                 {personal.map(({ relationship, connectedEntity }) => (
@@ -213,10 +215,12 @@ export default async function OrgPage({
             </section>
           )}
 
+          <hr className="editorial-rule" />
+
           {/* Sources */}
           {allSources.length > 0 && (
             <section className="mb-10">
-              <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+              <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Sources ({allSources.length})
               </h2>
               <div className="space-y-2">
@@ -225,7 +229,7 @@ export default async function OrgPage({
                   return (
                     <div
                       key={source.id}
-                      className="flex items-start gap-3 p-3 bg-gray-900 rounded-lg"
+                      className="flex items-start gap-3 p-3 bg-white border border-[#e0dcd4] rounded-sm"
                     >
                       <span
                         className="mt-1 w-2 h-2 rounded-full shrink-0"
@@ -237,7 +241,7 @@ export default async function OrgPage({
                           href={source.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm text-blue-400 hover:text-blue-300 break-words"
+                          className="text-sm text-blue-700 hover:text-blue-600 break-words"
                         >
                           {source.title}
                         </a>
@@ -248,7 +252,7 @@ export default async function OrgPage({
                           </span>
                         </div>
                         {source.excerpt && (
-                          <p className="text-xs text-gray-600 mt-1 italic">
+                          <p className="text-xs text-gray-400 mt-1 italic">
                             {source.excerpt}
                           </p>
                         )}
@@ -261,16 +265,16 @@ export default async function OrgPage({
           )}
 
           {/* Back links */}
-          <div className="flex gap-4 pt-6 border-t border-gray-800">
+          <div className="flex gap-4 pt-6 border-t border-[#e0dcd4]">
             <Link
               href="/graph"
-              className="text-orange-500 hover:text-orange-400 text-sm font-medium"
+              className="text-red-700 hover:text-red-600 text-sm font-medium"
             >
               &larr; View in network graph
             </Link>
             <Link
               href="/"
-              className="text-gray-500 hover:text-gray-300 text-sm"
+              className="text-gray-500 hover:text-gray-900 text-sm"
             >
               Back to home
             </Link>
@@ -302,11 +306,11 @@ function ConnectionCard({
   const initials = connectedEntity.name.split(' ').map((p: string) => p[0]).join('').slice(0, 2);
 
   const content = (
-    <div className="flex items-start gap-3 p-4 bg-gray-900 rounded-lg hover:bg-gray-850 transition-colors">
+    <div className="flex items-start gap-3 p-4 bg-white border border-[#e0dcd4] rounded-sm hover:border-gray-400 transition-colors">
       {connectedEntity.photo_url ? (
         <img src={connectedEntity.photo_url} alt={connectedEntity.name} className="w-10 h-10 rounded-full object-cover shrink-0 mt-0.5" />
       ) : (
-        <div className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-sm font-bold text-white shrink-0 mt-0.5">{initials}</div>
+        <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-sm font-bold text-gray-600 shrink-0 mt-0.5">{initials}</div>
       )}
       <div>
         <div className="flex items-center gap-2">
@@ -314,14 +318,14 @@ function ConnectionCard({
             className="w-2 h-2 rounded-full shrink-0"
             style={{ backgroundColor: color }}
           />
-          <span className="font-medium text-white">{connectedEntity.name}</span>
-          <span className="text-xs px-2 py-0.5 rounded-full bg-gray-800 text-gray-400">
+          <span className="font-medium text-gray-900">{connectedEntity.name}</span>
+          <span className="text-xs px-2 py-0.5 rounded-sm border border-[#e0dcd4] bg-gray-50 text-gray-500">
             {claimLabel}
           </span>
         </div>
-        <p className="text-sm text-gray-400 mt-1">{relationship.description}</p>
+        <p className="text-sm text-gray-600 mt-1">{relationship.description}</p>
         {relationship.amount_cents && (
-          <span className="text-lg text-red-400 font-bold mt-1 inline-block">
+          <span className="text-lg text-red-700 font-bold mt-1 inline-block">
             {formatAmount(relationship.amount_cents)}
           </span>
         )}

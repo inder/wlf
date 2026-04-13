@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
-  --foreground: #f3f4f6;
+  --background: #FAF9F6;
+  --foreground: #1a1a1a;
+  --accent: #c41e1e;
+  --border: #e0dcd4;
+  --card-bg: #ffffff;
+  --muted: #6b6560;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
 @theme inline {
@@ -17,19 +24,57 @@ body {
   color: var(--foreground);
 }
 
+/* Newspaper horizontal rules */
+.editorial-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.editorial-rule-thick {
+  border: none;
+  border-top: 3px solid #1a1a1a;
+  margin: 1.5rem 0;
+}
+
+.editorial-rule-double {
+  border: none;
+  border-top: 3px double #1a1a1a;
+  margin: 1.5rem 0;
+}
+
+/* Serif headings for editorial pages */
+.font-headline {
+  font-family: var(--font-serif);
+}
+
+/* Scrollbar — subtle for light theme */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #f0ece4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4b5563;
+  background: #c4bfb6;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: #a39e96;
+}
+
+/* Dark scrollbar override for graph/visualization pages */
+.dark-page ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark-page ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark-page ::-webkit-scrollbar-thumb:hover {
   background: #6b7280;
 }

@@ -13,7 +13,7 @@ export default function TimelinePage() {
   const events = getTimeline();
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-950">
+    <div className="min-h-screen flex flex-col bg-gray-950 text-gray-100 dark-page">
       {/* Top bar — matches graph page pattern */}
       <div className="flex-none h-14 bg-gray-900/80 backdrop-blur-md border-b border-gray-800/50 flex items-center px-6 z-40">
         <Link href="/" className="text-lg font-bold tracking-tight">

@@ -43,13 +43,13 @@ export default async function CountryPage({
 
   return (
     <div className="min-h-screen">
-      <nav className="fixed top-0 w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50">
+      <nav className="fixed top-0 w-full z-50 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-[#e0dcd4]">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight">
-            WLF<span className="text-orange-500">.</span>investigation
+          <Link href="/" className="text-lg font-bold tracking-tight text-gray-900">
+            WLF<span className="text-red-700">.</span>investigation
           </Link>
           <div className="flex gap-4 text-sm">
-            <Link href="/graph" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/graph" className="text-gray-500 hover:text-gray-900 transition-colors">
               Network Graph
             </Link>
           </div>
@@ -61,38 +61,40 @@ export default async function CountryPage({
           {/* Hero */}
           <div className="mb-10">
             <div className="flex items-start gap-5 mb-4">
-              <div className="w-20 h-20 rounded-full bg-purple-900/50 flex items-center justify-center text-2xl font-bold text-purple-300 shrink-0">
+              <div className="w-20 h-20 rounded-full bg-purple-50 border-2 border-purple-200 flex items-center justify-center text-2xl font-bold text-purple-700 shrink-0">
                 {entity.name.slice(0, 2).toUpperCase()}
               </div>
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold">{entity.name}</h1>
-                <p className="text-gray-400 mt-1">
+                <h1 className="font-headline text-3xl md:text-4xl font-bold text-gray-900">{entity.name}</h1>
+                <p className="text-gray-500 mt-1">
                   {connections.length} connections &middot;{' '}
                   {totalMoney > 0 && (
-                    <span className="text-red-400">
+                    <span className="text-red-700">
                       {formatAmount(totalMoney)} in documented flows
                     </span>
                   )}
                 </p>
               </div>
             </div>
-            <div className="bg-purple-950/30 border border-purple-800/30 rounded-lg p-4">
-              <p className="text-purple-300 font-medium">{entity.one_liner}</p>
+            <div className="bg-purple-50 border border-purple-200 rounded-sm p-4">
+              <p className="text-purple-800 font-medium">{entity.one_liner}</p>
             </div>
           </div>
 
           {/* Bio */}
           <section className="mb-10">
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
               Overview
             </h2>
-            <p className="text-gray-300 leading-relaxed">{entity.bio}</p>
+            <p className="text-gray-700 leading-relaxed">{entity.bio}</p>
           </section>
+
+          <hr className="editorial-rule" />
 
           {/* Connected people */}
           <section className="mb-10">
-            <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-              Connected People & Organizations ({connections.length})
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+              Connected People &amp; Organizations ({connections.length})
             </h2>
             <div className="space-y-3">
               {connections.map(({ relationship, person }) => {
@@ -114,25 +116,25 @@ export default async function CountryPage({
                       : null;
 
                 const card = (
-                  <div className="flex items-start gap-3 p-4 bg-gray-900 rounded-lg hover:bg-gray-850 transition-colors">
+                  <div className="flex items-start gap-3 p-4 bg-white border border-[#e0dcd4] rounded-sm hover:border-gray-400 transition-colors">
                     <span
                       className="mt-1.5 w-2.5 h-2.5 rounded-full shrink-0"
                       style={{ backgroundColor: color }}
                     />
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-medium text-white">
+                        <span className="font-medium text-gray-900">
                           {person.name}
                         </span>
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-gray-800 text-gray-400">
+                        <span className="text-xs px-2 py-0.5 rounded-sm border border-[#e0dcd4] bg-gray-50 text-gray-500">
                           {claimLabel}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-400 mt-1">
+                      <p className="text-sm text-gray-600 mt-1">
                         {relationship.description}
                       </p>
                       {relationship.amount_cents && (
-                        <span className="text-sm text-red-400 font-semibold mt-1 inline-block">
+                        <span className="text-sm text-red-700 font-semibold mt-1 inline-block">
                           {formatAmount(relationship.amount_cents)}
                         </span>
                       )}
@@ -151,16 +153,16 @@ export default async function CountryPage({
             </div>
           </section>
 
-          <div className="flex gap-4 pt-6 border-t border-gray-800">
+          <div className="flex gap-4 pt-6 border-t border-[#e0dcd4]">
             <Link
               href="/graph"
-              className="text-orange-500 hover:text-orange-400 text-sm font-medium"
+              className="text-red-700 hover:text-red-600 text-sm font-medium"
             >
               &larr; View in network graph
             </Link>
             <Link
               href="/"
-              className="text-gray-500 hover:text-gray-300 text-sm"
+              className="text-gray-500 hover:text-gray-900 text-sm"
             >
               Back to home
             </Link>
