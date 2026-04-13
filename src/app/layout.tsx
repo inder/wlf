@@ -21,6 +21,21 @@ export const metadata: Metadata = {
     description:
       "Who are the people behind Trump's crypto empire? Explore the network.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 2000,
+        height: 1530,
+        alt: "Network graph showing financial connections between Trump, foreign governments, and World Liberty Financial",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WLF Investigation — Follow the Money",
+    description:
+      "Interactive investigation mapping the people, money flows, and foreign government connections behind Trump's crypto empire.",
+    images: ["/og-image.png"],
   },
 };
 
