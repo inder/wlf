@@ -32,9 +32,20 @@ export default function TrumpFamily() {
             Trump Family
           </h3>
         </div>
-        {familyData.map(({ member, connections }) => {
+        {familyData.map(({ member, connections }, idx) => {
           const isSelected = selectedNodeId === member.id;
           const isMelania = member.id === 'e-melania-trump';
+
+          // Separator before Melania
+          const separator = isMelania ? (
+            <div key="separator" className="shrink-0 flex flex-col items-center justify-center px-2 self-stretch">
+              <div className="w-px h-full bg-gray-700/50" />
+              <span className="text-[8px] text-gray-500 uppercase tracking-wider py-1 whitespace-nowrap">
+                Separate Investigation
+              </span>
+              <div className="w-px h-full bg-gray-700/50" />
+            </div>
+          ) : null;
           const initials = member.name.split(' ').map(p => p[0]).join('').slice(0, 2);
           const keyConnections = connections
             .filter(c => c.connectedEntity.id !== member.id)
@@ -50,7 +61,7 @@ export default function TrumpFamily() {
           };
 
           return (
-            <button
+            <>{separator}<button
               key={member.id}
               onClick={handleClick}
               className={`shrink-0 flex flex-col items-center p-2 rounded-lg transition-all min-w-[130px] ${
@@ -114,7 +125,7 @@ export default function TrumpFamily() {
                   </span>
                 </div>
               )}
-            </button>
+            </button></>
           );
         })}
       </div>
