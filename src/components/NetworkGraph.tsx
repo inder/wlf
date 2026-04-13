@@ -262,17 +262,17 @@ export default function NetworkGraph() {
     nodeGroup
       .filter((d) => d.type === 'country' && !!COUNTRY_FLAGS[d.id])
       .append('foreignObject')
-      .attr('x', (d) => -(getImpactRadius(impactScores.get(d.id) || 1, d.id) * 0.6))
-      .attr('y', (d) => -(getImpactRadius(impactScores.get(d.id) || 1, d.id) * 0.6))
-      .attr('width', (d) => getImpactRadius(impactScores.get(d.id) || 1, d.id) * 1.2)
-      .attr('height', (d) => getImpactRadius(impactScores.get(d.id) || 1, d.id) * 1.2)
+      .attr('x', (d) => -(getImpactRadius(impactScores.get(d.id) || 1, d.id) * 0.9))
+      .attr('y', (d) => -(getImpactRadius(impactScores.get(d.id) || 1, d.id) * 0.9))
+      .attr('width', (d) => getImpactRadius(impactScores.get(d.id) || 1, d.id) * 1.8)
+      .attr('height', (d) => getImpactRadius(impactScores.get(d.id) || 1, d.id) * 1.8)
       .append('xhtml:div')
       .style('width', '100%')
       .style('height', '100%')
       .style('display', 'flex')
       .style('align-items', 'center')
       .style('justify-content', 'center')
-      .style('font-size', (d: any) => `${getImpactRadius(impactScores.get(d.id) || 1, d.id) * 0.7}px`)
+      .style('font-size', (d: any) => `${getImpactRadius(impactScores.get(d.id) || 1, d.id) * 1.3}px`)
       .style('line-height', '1')
       .text((d: any) => COUNTRY_FLAGS[d.id] || '');
 
@@ -356,10 +356,12 @@ export default function NetworkGraph() {
       .attr('font-size', (d) => {
         if (d.id === 'o-wlf') return 13;
         if (d.id === 'e-donald-trump') return 12;
+        if (d.type === 'country') return 14;
         return d.type === 'person' ? 11 : 10;
       })
       .attr('font-weight', (d) => {
         if (d.id === 'o-wlf' || d.id === 'e-donald-trump') return '700';
+        if (d.type === 'country') return '700';
         return d.type === 'person' ? '600' : '400';
       })
       .text(getNodeLabel);

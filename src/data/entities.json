@@ -47,7 +47,7 @@
     "bio": "New York real estate mogul who founded the Witkoff Group in 1997. Met Trump in 1986; longtime personal friend and business associate. Donated $2+ million to Trump's political action groups. Key Trump campaign fundraiser. Has not fully divested from the Witkoff Group or WLF while serving as US Special Envoy to the Middle East. Forbes reported he 'substantially enriched himself' during his tenure as envoy.",
     "role": "Co-Founder Emeritus, WLF — US Special Envoy to the Middle East",
     "one_liner": "US envoy who hasn't divested from WLF, $2M+ to Trump PACs",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Steve_Witkoff_%282025%29_%28cropped%29.jpg/440px-Steve_Witkoff_%282025%29_%28cropped%29.jpg"
+    "photo_url": "/photos/steve-witkoff.jpg"
   },
   {
     "id": "e-sun",
@@ -57,7 +57,7 @@
     "bio": "Chinese-born, now citizen of St. Kitts and Nevis. Founder of TRON blockchain. Largest known external WLF investor at $75M+ in WLFI tokens. SEC civil fraud case was quietly dropped in February 2025, shortly after Trump took office and after Sun invested $75M in WLF. Former Ambassador and Permanent Representative of Grenada to the WTO (2021-2023). WLF integrated its USD1 stablecoin into Sun's TRON blockchain.",
     "role": "WLF Advisor — Largest external investor ($75M+)",
     "one_liner": "SEC case dropped after $75M WLF investment, TRON founder",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Head_of_the_Grenadian_Delegation_to_the_12th_World_Trade_Organization_Ministerial_Conference_Justin_Sun.jpg/440px-Head_of_the_Grenadian_Delegation_to_the_12th_World_Trade_Organization_Ministerial_Conference_Justin_Sun.jpg"
+    "photo_url": "/photos/justin-sun.jpg"
   },
   {
     "id": "e-caplan",
@@ -97,7 +97,7 @@
     "bio": "UAE royal family member and National Security Advisor of the UAE, known as 'The Spy Sheikh' for his intelligence role. Purchased 49% of WLF for $500 million via Aryam Investment, signed days before Trump's January 2025 inauguration. $187 million was paid immediately to Trump family entities; at least $31 million went to Witkoff-connected entities. The deal was not disclosed by WLF. Months after this purchase, the Trump administration approved giving the UAE access to 500,000 advanced AI chips per year.",
     "role": "Secret 49% owner of WLF — UAE National Security Advisor",
     "one_liner": "Secret $500M stake, UAE spy chief, AI chip deal followed",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Tahnoun_bin_Zayed_Al_Nahyan_-_2025_%28cropped%29.jpg"
+    "photo_url": "/photos/tahnoun-bin-zayed.jpg"
   },
   {
     "id": "e-pearson",
@@ -298,7 +298,7 @@
     "bio": "45th and 47th President of the United States. Named 'Chief Crypto Advocate' of World Liberty Financial. The Trump Organization affiliate CIC Digital LLC and Fight Fight Fight LLC hold 80% of $TRUMP memecoin tokens. His family collectively controls WLF through DT Marks DEFI LLC, which received 22.5 billion WLFI governance tokens (75% of total supply). $187 million from Sheikh Tahnoun's secret $500M WLF stake went directly to Trump family entities.",
     "role": "Chief Crypto Advocate, WLF — 47th President of the United States",
     "one_liner": "$187M from secret UAE deal, 75% governance token control, $350M memecoin",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/440px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg"
+    "photo_url": "/photos/donald-trump.jpg"
   },
   {
     "id": "e-eric-trump",
@@ -308,7 +308,7 @@
     "bio": "Son of Donald Trump and Executive Vice President of the Trump Organization. Designated 'Web3 Ambassador' for World Liberty Financial. Actively promotes WLF on social media and at crypto conferences. Part of the Trump family structure that controls WLF through DT Marks DEFI LLC.",
     "role": "Web3 Ambassador, WLF — EVP Trump Organization",
     "one_liner": "WLF's public face in crypto, Trump Organization exec",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Consensus_2025_-_Eric_Trump_10_%283x4_cropped%29.jpg/440px-Consensus_2025_-_Eric_Trump_10_%283x4_cropped%29.jpg"
+    "photo_url": "/photos/eric-trump.jpg"
   },
   {
     "id": "e-don-jr",
@@ -318,7 +318,7 @@
     "bio": "Eldest son of Donald Trump. Designated 'Web3 Ambassador' alongside his brother Eric for World Liberty Financial. Part of the Trump family structure that controls WLF through DT Marks DEFI LLC. Actively promotes WLF and Trump-branded crypto ventures.",
     "role": "Web3 Ambassador, WLF — Trump Organization exec",
     "one_liner": "WLF promoter, part of family's 75% governance token control",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Donald_Trump%2C_Jr._%2855021618832%29_%28cropped%29.jpg/440px-Donald_Trump%2C_Jr._%2855021618832%29_%28cropped%29.jpg"
+    "photo_url": "/photos/donald-trump-jr.jpg"
   },
   {
     "id": "e-barron-trump",
@@ -328,7 +328,7 @@
     "bio": "Youngest son of Donald Trump. Credited as a 'DeFi visionary' by the family and reportedly the driving force behind the Trump family's entry into crypto. Named as a beneficiary of DT Marks DEFI LLC, the entity that controls 75% of WLF governance tokens.",
     "role": "DeFi Visionary, WLF — Beneficiary of DT Marks DEFI LLC",
     "one_liner": "Reportedly drove Trump family into crypto, DT Marks beneficiary",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Barron_Trump_at_Donald_Trump%27s_second_inauguration_%283%29.jpg/440px-Barron_Trump_at_Donald_Trump%27s_second_inauguration_%283%29.jpg"
+    "photo_url": "/photos/barron-trump.jpg"
   },
   {
     "id": "e-dulub",
