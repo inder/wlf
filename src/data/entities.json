@@ -321,6 +321,16 @@
     "photo_url": "/photos/donald-trump-jr.jpg"
   },
   {
+    "id": "e-melania-trump",
+    "slug": "melania-trump",
+    "name": "Melania Trump",
+    "type": "person",
+    "bio": "First Lady of the United States. Launched the $MELANIA memecoin on January 19, 2025 through MKT World LLC, extracting $65M+ while the token crashed 98%. The same deployer (Hayden Davis / Kelsier Ventures) later ran the Argentine $LIBRA scandal.",
+    "role": "First Lady — $MELANIA Token Beneficiary",
+    "one_liner": "$65M extracted from memecoin launched night before inauguration",
+    "photo_url": null
+  },
+  {
     "id": "e-barron-trump",
     "slug": "barron-trump",
     "name": "Barron Trump",

@@ -127,4 +127,4 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'c-cambodia': '\u{1F1F0}\u{1F1ED}',
 };
 
-export const TRUMP_FAMILY_IDS = ['e-donald-trump', 'e-eric-trump', 'e-don-jr', 'e-barron-trump'];
+export const TRUMP_FAMILY_IDS = ['e-donald-trump', 'e-melania-trump', 'e-eric-trump', 'e-don-jr', 'e-barron-trump'];

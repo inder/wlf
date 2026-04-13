@@ -39,6 +39,9 @@ export default function FlowsPage() {
           <Link href="/graph" className="text-gray-400 hover:text-white transition-colors">
             Network Graph
           </Link>
+          <Link href="/melania" className="text-pink-400 hover:text-pink-300 transition-colors">
+            $MELANIA
+          </Link>
           <Link href="/methodology" className="text-gray-400 hover:text-white transition-colors">
             Methodology
           </Link>

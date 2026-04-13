@@ -58,6 +58,9 @@ export default function Home() {
             <Link href="/timeline" className="text-gray-400 hover:text-white transition-colors">
               Timeline
             </Link>
+            <Link href="/melania" className="text-pink-400 hover:text-pink-300 transition-colors">
+              $MELANIA
+            </Link>
             <Link href="/methodology" className="text-gray-400 hover:text-white transition-colors">
               Methodology
             </Link>

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "m-melania-trump",
+    "slug": "melania-trump",
+    "name": "Melania Trump",
+    "type": "person",
+    "bio": "First Lady of the United States. Launched the $MELANIA memecoin on January 19, 2025 — the night before the inauguration — through MKT World LLC, a company she founded in 2021. The token briefly hit $2B market cap before crashing 98%. Insiders extracted $65M+ while retail investors lost billions.",
+    "role": "First Lady — $MELANIA Token Beneficiary",
+    "one_liner": "$65M extracted from memecoin launched night before inauguration",
+    "photo_url": null
+  },
+  {
+    "id": "m-mkt-world",
+    "slug": "mkt-world",
+    "name": "MKT World LLC",
+    "type": "company",
+    "bio": "Delaware LLC founded by Melania Trump in 2021. Originally used for NFT ventures, it became the issuing entity behind the $MELANIA memecoin. Withdrew $64.7M in primary sales and fees. Business address shared with Trump International Golf Club.",
+    "role": "$MELANIA Token Issuer",
+    "one_liner": "$64.7M extracted, shares address with Trump golf club"
+  },
+  {
+    "id": "m-hayden-davis",
+    "slug": "hayden-davis",
+    "name": "Hayden Davis",
+    "type": "person",
+    "bio": "28-year-old Texas crypto entrepreneur and CEO of Kelsier Ventures. Deployed the $MELANIA token and admitted to sniping both $MELANIA and $LIBRA tokens — buying before public announcements for outsized profits. Later orchestrated the $LIBRA token scandal tied to Argentine President Milei. Court filings allege his team 'weaponized fame to disarm diligence' in a sprawling crypto conspiracy.",
+    "role": "Token Deployer — CEO of Kelsier Ventures",
+    "one_liner": "Deployed $MELANIA, admitted to sniping, also behind $LIBRA scandal",
+    "photo_url": null
+  },
+  {
+    "id": "m-kelsier",
+    "slug": "kelsier-ventures",
+    "name": "Kelsier Ventures",
+    "type": "company",
+    "bio": "Crypto firm led by Hayden Davis that deployed the $MELANIA token smart contract on Solana. Also deployed the controversial $LIBRA token for Argentine President Milei. Earned tens of millions in trading fees and sniping profits across both tokens.",
+    "role": "Token Deployment Firm",
+    "one_liner": "Deployed both $MELANIA and $LIBRA scandal tokens"
+  },
+  {
+    "id": "m-melania-token",
+    "slug": "melania-token",
+    "name": "$MELANIA Token",
+    "type": "organization",
+    "bio": "Solana memecoin launched January 19, 2025. 1 billion total supply with ~90% held by insiders. Peaked at $2B+ market cap, then crashed 98%. Top 10 wallets controlled 85%+ of supply. No utility, no roadmap — pure speculation on the Trump brand. Bubblemaps analysis showed Sybil-like wallet distribution to fake decentralization.",
+    "role": "Memecoin (Solana SPL Token)",
+    "one_liner": "98% crash, 90% insider-held, $2B peak wiped out"
+  },
+  {
+    "id": "m-libra-token",
+    "slug": "libra-token",
+    "name": "$LIBRA Token",
+    "type": "organization",
+    "bio": "Controversial Solana memecoin deployed by Kelsier Ventures and promoted by Argentine President Javier Milei in February 2025. The same team that launched $MELANIA. The scandal led to calls for Milei's impeachment and exposed the cross-border memecoin grift pipeline.",
+    "role": "Milei Memecoin Scandal",
+    "one_liner": "Same deployer as $MELANIA, nearly toppled Argentine president"
+  },
+  {
+    "id": "m-milei",
+    "slug": "javier-milei",
+    "name": "Javier Milei",
+    "type": "person",
+    "bio": "President of Argentina who promoted the $LIBRA token, which was deployed by the same Kelsier Ventures team that deployed Melania Trump's $MELANIA token. The scandal led to massive political fallout in Argentina.",
+    "role": "President of Argentina",
+    "one_liner": "Promoted $LIBRA token from same team as $MELANIA",
+    "photo_url": null
+  },
+  {
+    "id": "e-zanker",
+    "slug": "bill-zanker",
+    "name": "Bill Zanker",
+    "type": "person",
+    "bio": "Longtime Trump associate who helped both Donald and Melania launch their memecoins. Operates Fight Fight Fight LLC ($TRUMP coin). Co-authored a book with Trump in 2007. The connective tissue between $TRUMP and $MELANIA operations.",
+    "role": "Operator of $TRUMP — Connected to $MELANIA launch",
+    "one_liner": "Helped launch BOTH Trump family memecoins",
+    "photo_url": null
+  },
+  {
+    "id": "o-fff",
+    "slug": "fight-fight-fight-llc",
+    "name": "Fight Fight Fight LLC",
+    "type": "company",
+    "bio": "Entity that controls the $TRUMP memecoin. Operated by Bill Zanker. Along with CIC Digital LLC, holds 80% of all $TRUMP tokens. Generated $362M in fees. $TRUMP dropped 40% when $MELANIA launched two days later.",
+    "role": "$TRUMP Memecoin Operator",
+    "one_liner": "$362M extracted, $TRUMP crashed 40% when $MELANIA launched"
+  },
+  {
+    "id": "o-wlf",
+    "slug": "world-liberty-financial",
+    "name": "World Liberty Financial",
+    "type": "organization",
+    "bio": "Trump family crypto venture. Combined with $TRUMP ($362M) and $MELANIA ($65M), the Trump family's crypto empire has extracted over $1 billion.",
+    "role": "Trump Crypto Empire Hub",
+    "one_liner": "$1B+ total extraction across WLF, $TRUMP, $MELANIA"
+  },
+  {
+    "id": "e-donald-trump",
+    "slug": "donald-trump",
+    "name": "Donald Trump",
+    "type": "person",
+    "bio": "47th President. Combined crypto earnings: $362M from $TRUMP, $550M from WLF, family share of $MELANIA profits.",
+    "role": "47th President — Chief Crypto Advocate",
+    "one_liner": "$1B+ combined family crypto extraction",
+    "photo_url": "/photos/donald-trump.jpg"
+  }
+]

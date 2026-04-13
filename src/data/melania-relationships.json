@@ -1,0 +1,146 @@
+[
+  {
+    "id": "mr-1",
+    "source_id": "m-melania-trump",
+    "target_id": "m-mkt-world",
+    "type": "employment",
+    "claim_type": "documented",
+    "description": "Founded MKT World LLC in 2021, used to launch $MELANIA token",
+    "date_precision": "year",
+    "source_ids": ["ms-1"]
+  },
+  {
+    "id": "mr-2",
+    "source_id": "m-mkt-world",
+    "target_id": "m-melania-token",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "MKT World LLC issued and controls $MELANIA token",
+    "date_precision": "day",
+    "source_ids": ["ms-1"]
+  },
+  {
+    "id": "mr-3",
+    "source_id": "m-melania-token",
+    "target_id": "m-melania-trump",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "$65M extracted from $MELANIA memecoin to Trump family",
+    "amount_cents": 6500000000,
+    "date_precision": "month",
+    "source_ids": ["ms-2"]
+  },
+  {
+    "id": "mr-4",
+    "source_id": "m-melania-token",
+    "target_id": "m-mkt-world",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "$64.7M withdrawn in primary sales and fees",
+    "amount_cents": 6470000000,
+    "date_precision": "month",
+    "source_ids": ["ms-3"]
+  },
+  {
+    "id": "mr-5",
+    "source_id": "m-hayden-davis",
+    "target_id": "m-kelsier",
+    "type": "employment",
+    "claim_type": "documented",
+    "description": "CEO of Kelsier Ventures",
+    "date_precision": "year",
+    "source_ids": ["ms-4"]
+  },
+  {
+    "id": "mr-6",
+    "source_id": "m-kelsier",
+    "target_id": "m-melania-token",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "Kelsier Ventures deployed $MELANIA token contract on Solana",
+    "date_precision": "day",
+    "source_ids": ["ms-4"]
+  },
+  {
+    "id": "mr-7",
+    "source_id": "m-kelsier",
+    "target_id": "m-libra-token",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "Same team deployed $LIBRA token for President Milei",
+    "date_precision": "month",
+    "source_ids": ["ms-5"]
+  },
+  {
+    "id": "mr-8",
+    "source_id": "m-milei",
+    "target_id": "m-libra-token",
+    "type": "political",
+    "claim_type": "documented",
+    "description": "Argentine President promoted $LIBRA, leading to political scandal",
+    "date_precision": "month",
+    "source_ids": ["ms-5"]
+  },
+  {
+    "id": "mr-9",
+    "source_id": "m-hayden-davis",
+    "target_id": "m-melania-token",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "Admitted to sniping $MELANIA tokens before public announcement",
+    "date_precision": "day",
+    "source_ids": ["ms-4"]
+  },
+  {
+    "id": "mr-10",
+    "source_id": "e-zanker",
+    "target_id": "m-melania-trump",
+    "type": "advisory",
+    "claim_type": "reported",
+    "description": "Helped both Donald and Melania Trump launch their memecoins",
+    "date_precision": "month",
+    "source_ids": ["ms-2"]
+  },
+  {
+    "id": "mr-11",
+    "source_id": "e-zanker",
+    "target_id": "o-fff",
+    "type": "employment",
+    "claim_type": "documented",
+    "description": "Operates Fight Fight Fight LLC, issuer of $TRUMP token",
+    "date_precision": "year",
+    "source_ids": ["ms-6"]
+  },
+  {
+    "id": "mr-12",
+    "source_id": "o-fff",
+    "target_id": "e-donald-trump",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "$362M in $TRUMP memecoin profits to Trump family",
+    "amount_cents": 36200000000,
+    "date_precision": "year",
+    "source_ids": ["ms-2"]
+  },
+  {
+    "id": "mr-13",
+    "source_id": "e-donald-trump",
+    "target_id": "m-melania-trump",
+    "type": "familial",
+    "claim_type": "documented",
+    "description": "Married — combined crypto empire exceeds $1 billion",
+    "date_precision": "year",
+    "source_ids": ["ms-2"]
+  },
+  {
+    "id": "mr-14",
+    "source_id": "e-donald-trump",
+    "target_id": "o-wlf",
+    "type": "financial",
+    "claim_type": "documented",
+    "description": "$550M+ from World Liberty Financial token sales",
+    "amount_cents": 55000000000,
+    "date_precision": "year",
+    "source_ids": ["ms-7"]
+  }
+]

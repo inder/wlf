@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ms-1",
+    "url": "https://cryptoslate.com/melania-memecoin-insiders-reportedly-make-over-150-million-including-pre-sale-trades/",
+    "title": "MELANIA memecoin insiders reportedly make over $150 million",
+    "publisher": "CryptoSlate",
+    "date": "2025-01-22",
+    "tier": "specialist"
+  },
+  {
+    "id": "ms-2",
+    "url": "https://www.bloomberg.com/news/features/2025-12-14/trump-family-crypto-money-how-donald-melania-profited-from-memecoins",
+    "title": "How Bill Zanker Helped Trump and Melania Launch Memecoins",
+    "publisher": "Bloomberg",
+    "date": "2025-12-14",
+    "tier": "major_publication"
+  },
+  {
+    "id": "ms-3",
+    "url": "https://www.dlnews.com/articles/people-culture/inside-the-trump-family-crypto-empire/",
+    "title": "Inside the Trump family's $16bn crypto empire",
+    "publisher": "DL News",
+    "date": "2025-06-01",
+    "tier": "specialist"
+  },
+  {
+    "id": "ms-4",
+    "url": "https://www.coindesk.com/business/2025/02/17/javier-milei-memecoin-creator-also-launched-melania-admits-to-sniping-tokens",
+    "title": "LIBRA Creator Also Launched MELANIA, Admits to Sniping Tokens",
+    "publisher": "CoinDesk",
+    "date": "2025-02-17",
+    "tier": "specialist"
+  },
+  {
+    "id": "ms-5",
+    "url": "https://fortune.com/crypto/2025/10/23/melania-trump-memecoin-conspiracy-court-filing-benjamin-chow-hayden-davis/",
+    "title": "Melania Trump memecoin team 'weaponized fame to disarm diligence'",
+    "publisher": "Fortune",
+    "date": "2025-10-23",
+    "tier": "major_publication"
+  },
+  {
+    "id": "ms-6",
+    "url": "https://www.banking.senate.gov/imo/media/doc/20260408_warren_schiff_blumenthal_letter_to_fff_llc_re_trump_memecoin_conferencepdf.pdf",
+    "title": "Senate Banking Committee Letter to Fight Fight Fight LLC",
+    "publisher": "US Senate Banking Committee",
+    "date": "2026-04-08",
+    "tier": "official"
+  },
+  {
+    "id": "ms-7",
+    "url": "https://www.coindesk.com/business/2025/05/09/trump-family-profited-usd320m-on-memecoin-despite-87-decline-since-day-one",
+    "title": "Trump Family Profited $320M on Memecoin Despite 87% Decline",
+    "publisher": "CoinDesk",
+    "date": "2025-05-09",
+    "tier": "specialist"
+  }
+]
