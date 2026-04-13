@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getStats, formatAmount } from "@/lib/data";
+import ShareButtons from "@/components/ShareButtons";
 
 const STORY_CARDS = [
   {
@@ -84,6 +85,7 @@ export default function Home() {
             Explore the Network
             <span aria-hidden="true">&rarr;</span>
           </Link>
+          <ShareButtons className="mt-6 justify-center" />
         </div>
       </section>
 
@@ -169,6 +171,7 @@ export default function Home() {
           party, government, or organization. All data is sourced from public records
           and published reporting.
         </p>
+        <ShareButtons className="mt-4 justify-center" />
       </footer>
     </div>
   );

@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { formatAmount } from '@/lib/data';
+import ShareButtons from '@/components/ShareButtons';
 
 const SankeyDiagram = dynamic(() => import('@/components/SankeyDiagram'), {
   ssr: false,
@@ -41,6 +42,7 @@ export default function FlowsPage() {
           <Link href="/methodology" className="text-gray-400 hover:text-white transition-colors">
             Methodology
           </Link>
+          <ShareButtons />
         </div>
       </div>
 

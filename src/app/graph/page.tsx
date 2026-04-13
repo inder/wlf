@@ -6,6 +6,7 @@ import Sidebar from '@/components/Sidebar';
 import FilterPanel from '@/components/FilterPanel';
 import TrumpFamily from '@/components/TrumpFamily';
 import SearchBar from '@/components/SearchBar';
+import ShareButtons from '@/components/ShareButtons';
 
 const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
   ssr: false,
@@ -38,6 +39,7 @@ export default function GraphPage() {
           <Link href="/methodology" className="text-gray-400 hover:text-white transition-colors">
             Methodology
           </Link>
+          <ShareButtons />
         </div>
       </div>
 
