@@ -51,9 +51,6 @@ export default function Home() {
             <Link href="/graph" className="text-gray-400 hover:text-white transition-colors">
               Network Graph
             </Link>
-            <Link href="/flows" className="text-gray-400 hover:text-white transition-colors">
-              Money Flows
-            </Link>
             <Link href="/timeline" className="text-gray-400 hover:text-white transition-colors">
               Timeline
             </Link>
