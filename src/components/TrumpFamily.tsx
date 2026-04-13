@@ -6,11 +6,17 @@ import { VISUAL_COLORS, RELATION_TO_VISUAL } from '@/lib/types';
 
 const FAMILY_ORDER = ['e-donald-trump', 'e-eric-trump', 'e-don-jr', 'e-barron-trump'];
 
+const DISPLAY_NAMES: Record<string, string> = {
+  'e-donald-trump': 'Donald Trump',
+  'e-eric-trump': 'Eric Trump',
+  'e-don-jr': 'Donald Jr.',
+  'e-barron-trump': 'Barron Trump',
+};
+
 export default function TrumpFamily() {
   const { selectNode, selectedNodeId } = useGraphStore();
   const familyData = getTrumpFamilyConnections();
 
-  // Sort by our preferred order
   familyData.sort((a, b) =>
     FAMILY_ORDER.indexOf(a.member.id) - FAMILY_ORDER.indexOf(b.member.id)
   );
@@ -19,7 +25,7 @@ export default function TrumpFamily() {
     <div className="flex-none bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50 px-4 py-3">
       <div className="flex items-start gap-1 overflow-x-auto">
         <div className="shrink-0 mr-3 self-center">
-          <h3 className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">
+          <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">
             Trump Family
           </h3>
         </div>
@@ -35,29 +41,39 @@ export default function TrumpFamily() {
             <button
               key={member.id}
               onClick={() => selectNode(member.id)}
-              className={`shrink-0 flex flex-col items-center p-2 rounded-lg transition-all min-w-[110px] ${
+              className={`shrink-0 flex flex-col items-center p-2 rounded-lg transition-all min-w-[130px] ${
                 isSelected
                   ? 'bg-orange-950/50 border border-orange-700/50'
                   : 'hover:bg-gray-800/50 border border-transparent'
               }`}
             >
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white ${
-                member.id === 'e-donald-trump' ? 'bg-orange-600 ring-2 ring-orange-400/50' : 'bg-gray-700'
-              }`}>
-                {initials}
-              </div>
-              <span className="text-[11px] font-semibold text-white mt-1 text-center leading-tight">
-                {member.name.split(' ').pop()}
+              {member.photo_url ? (
+                <img
+                  src={member.photo_url}
+                  alt={member.name}
+                  className={`w-12 h-12 rounded-full object-cover ${
+                    member.id === 'e-donald-trump' ? 'ring-2 ring-orange-400/50' : 'ring-1 ring-gray-600'
+                  }`}
+                />
+              ) : (
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold text-white ${
+                  member.id === 'e-donald-trump' ? 'bg-orange-600 ring-2 ring-orange-400/50' : 'bg-gray-700'
+                }`}>
+                  {initials}
+                </div>
+              )}
+              <span className="text-sm font-semibold text-white mt-1.5 text-center leading-tight">
+                {DISPLAY_NAMES[member.id] || member.name}
               </span>
-              <span className="text-[9px] text-gray-500 text-center leading-tight mt-0.5">
+              <span className="text-xs text-gray-400 text-center leading-tight mt-0.5">
                 {member.role?.split('—')[0]?.trim().split(',')[0] || ''}
               </span>
               {/* Key connection chips */}
-              <div className="flex flex-wrap gap-0.5 mt-1 justify-center">
+              <div className="flex flex-wrap gap-1 mt-1.5 justify-center">
                 {keyConnections.map(({ relationship, connectedEntity }) => (
                   <span
                     key={relationship.id}
-                    className="text-[7px] px-1 py-0.5 rounded-full leading-none"
+                    className="text-[10px] px-1.5 py-0.5 rounded-full leading-none"
                     style={{
                       backgroundColor: VISUAL_COLORS[RELATION_TO_VISUAL[relationship.type]] + '22',
                       color: VISUAL_COLORS[RELATION_TO_VISUAL[relationship.type]],
