@@ -26,6 +26,9 @@ export default function GraphPage() {
         </Link>
         <div className="ml-auto flex items-center gap-4 text-sm">
           <SearchBar />
+          <Link href="/flows" className="text-gray-400 hover:text-white transition-colors">
+            Money Flows
+          </Link>
           <Link href="/timeline" className="text-gray-400 hover:text-white transition-colors">
             Timeline
           </Link>
