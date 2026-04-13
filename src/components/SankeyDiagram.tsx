@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import * as d3 from 'd3';
 import { sankey, sankeyLinkHorizontal, SankeyNode, SankeyLink } from 'd3-sankey';
-import { entities, relationships, formatAmount } from '@/lib/data';
+import { formatAmount } from '@/lib/data';
 
 interface SankeyNodeExtra {
   id: string;
   name: string;
   entityType: string;
+  column: number;
 }
 
 interface SankeyLinkExtra {
@@ -19,84 +20,120 @@ interface SankeyLinkExtra {
 type SNode = SankeyNode<SankeyNodeExtra, SankeyLinkExtra>;
 type SLink = SankeyLink<SankeyNodeExtra, SankeyLinkExtra>;
 
+// Hand-curated flows for a clean Sankey story:
+// Left column: money sources flowing INTO WLF
+// Center: WLF
+// Right column: money flowing OUT of WLF / recipients
+const CURATED_FLOWS: Array<{
+  source: string;
+  sourceName: string;
+  sourceType: string;
+  target: string;
+  targetName: string;
+  targetType: string;
+  amount_cents: number;
+  description: string;
+}> = [
+  // Money IN to WLF
+  {
+    source: 'tahnoun', sourceName: 'Sheikh Tahnoun (UAE)', sourceType: 'person',
+    target: 'wlf', targetName: 'World Liberty Financial', targetType: 'organization',
+    amount_cents: 50_000_000_000, description: 'Secret 49% stake via Aryam Investment',
+  },
+  {
+    source: 'mgx', sourceName: 'MGX (Abu Dhabi)', sourceType: 'company',
+    target: 'wlf', targetName: 'World Liberty Financial', targetType: 'organization',
+    amount_cents: 200_000_000_000, description: '$2B in USD1 stablecoin for Binance deal',
+  },
+  {
+    source: 'fff', sourceName: '$TRUMP Memecoin', sourceType: 'company',
+    target: 'wlf', targetName: 'World Liberty Financial', targetType: 'organization',
+    amount_cents: 35_000_000_000, description: '$350M in memecoin fees',
+  },
+  {
+    source: 'sun', sourceName: 'Justin Sun', sourceType: 'person',
+    target: 'wlf', targetName: 'World Liberty Financial', targetType: 'organization',
+    amount_cents: 7_500_000_000, description: 'Largest external investor, $75M+ in WLFI tokens',
+  },
+  // Money OUT of WLF
+  {
+    source: 'wlf', sourceName: 'World Liberty Financial', sourceType: 'organization',
+    target: 'trump-family', targetName: 'Trump Family', targetType: 'person',
+    amount_cents: 18_700_000_000, description: '$187M from Tahnoun stake paid to Trump entities',
+  },
+  {
+    source: 'wlf', sourceName: 'World Liberty Financial', sourceType: 'organization',
+    target: 'herro-folkman', targetName: 'Herro & Folkman', targetType: 'person',
+    amount_cents: 6_500_000_000, description: 'Co-founders collected $65M from WLF',
+  },
+  {
+    source: 'wlf', sourceName: 'World Liberty Financial', sourceType: 'organization',
+    target: 'dolomite', targetName: 'Dolomite (CTO)', targetType: 'company',
+    amount_cents: 7_500_000_000, description: 'CTO borrowed $75M from his own protocol',
+  },
+  {
+    source: 'wlf', sourceName: 'World Liberty Financial', sourceType: 'organization',
+    target: 'witkoff', targetName: 'Witkoff Entities', targetType: 'person',
+    amount_cents: 3_100_000_000, description: '$31M+ to Witkoff-connected entities from Tahnoun deal',
+  },
+  // Witkoff side deal (column 2 → 3)
+  {
+    source: 'witkoff', sourceName: 'Witkoff Entities', sourceType: 'person',
+    target: 'qatar', targetName: 'Qatar', targetType: 'country',
+    amount_cents: 62_300_000_000, description: 'Sold Park Lane Hotel to Qatari Investment Authority',
+  },
+];
+
+// Column assignments: 0=left (sources), 1=center (WLF), 2=right (recipients), 3=far right
+const COLUMN_MAP: Record<string, number> = {
+  tahnoun: 0,
+  mgx: 0,
+  fff: 0,
+  sun: 0,
+  wlf: 1,
+  'trump-family': 2,
+  'herro-folkman': 2,
+  dolomite: 2,
+  witkoff: 2,
+  qatar: 3,
+};
+
 function buildSankeyData() {
-  // Only financial relationships with actual dollar amounts
-  const financialRels = relationships.filter(
-    (r) => r.type === 'financial' && r.amount_cents && r.amount_cents > 0
-  );
-
-  // Build unique node set from financial relationships
-  const nodeIds = new Set<string>();
-  for (const rel of financialRels) {
-    nodeIds.add(rel.source_id);
-    nodeIds.add(rel.target_id);
-  }
-
-  const entityMap = new Map(entities.map((e) => [e.id, e]));
-  const nodeArray = Array.from(nodeIds);
-  const nodeIndexMap = new Map(nodeArray.map((id, i) => [id, i]));
-
-  const nodes: SankeyNodeExtra[] = nodeArray.map((id) => {
-    const entity = entityMap.get(id);
-    return {
-      id,
-      name: entity?.name ?? id,
-      entityType: entity?.type ?? 'unknown',
-    };
-  });
-
-  // d3-sankey doesn't allow cycles. Some relationships form cycles
-  // (e.g., Sun -> WLF and WLF -> TRON). We need to detect and break them.
-  // Build an adjacency list and do a simple DFS cycle check.
-  const adj = new Map<string, Set<string>>();
+  const nodeMap = new Map<string, SankeyNodeExtra>();
   const links: Array<{ source: string; target: string; value: number; amount_cents: number; description: string }> = [];
 
-  for (const rel of financialRels) {
-    const srcId = rel.source_id;
-    const tgtId = rel.target_id;
+  for (const flow of CURATED_FLOWS) {
+    if (!nodeMap.has(flow.source)) {
+      nodeMap.set(flow.source, {
+        id: flow.source,
+        name: flow.sourceName,
+        entityType: flow.sourceType,
+        column: COLUMN_MAP[flow.source] ?? 0,
+      });
+    }
+    if (!nodeMap.has(flow.target)) {
+      nodeMap.set(flow.target, {
+        id: flow.target,
+        name: flow.targetName,
+        entityType: flow.targetType,
+        column: COLUMN_MAP[flow.target] ?? 2,
+      });
+    }
 
-    if (srcId === tgtId) continue; // skip self-loops
-
-    // Check if adding this edge creates a cycle using simple path check
-    if (wouldCreateCycle(adj, srcId, tgtId)) continue;
-
-    if (!adj.has(srcId)) adj.set(srcId, new Set());
-    adj.get(srcId)!.add(tgtId);
+    // Use sqrt compression so $2B doesn't dwarf $31M
+    // Without this, $2B is 65x thicker than $31M — unreadable
+    const compressed = Math.sqrt(flow.amount_cents / 100);
 
     links.push({
-      source: srcId,
-      target: tgtId,
-      value: rel.amount_cents! / 100, // convert to dollars for sizing
-      amount_cents: rel.amount_cents!,
-      description: rel.description,
+      source: flow.source,
+      target: flow.target,
+      value: compressed,
+      amount_cents: flow.amount_cents,
+      description: flow.description,
     });
   }
 
-  return { nodes, links };
-}
-
-function wouldCreateCycle(
-  adj: Map<string, Set<string>>,
-  from: string,
-  to: string
-): boolean {
-  // Would adding edge from->to create a cycle?
-  // Check if there's already a path from 'to' to 'from'
-  const visited = new Set<string>();
-  const queue = [to];
-  while (queue.length > 0) {
-    const current = queue.shift()!;
-    if (current === from) return true;
-    if (visited.has(current)) continue;
-    visited.add(current);
-    const neighbors = adj.get(current);
-    if (neighbors) {
-      for (const n of neighbors) {
-        queue.push(n);
-      }
-    }
-  }
-  return false;
+  return { nodes: Array.from(nodeMap.values()), links };
 }
 
 export default function SankeyDiagram() {
@@ -136,7 +173,7 @@ export default function SankeyDiagram() {
     const { nodes, links } = buildSankeyData();
     if (nodes.length === 0 || links.length === 0) return;
 
-    const margin = { top: 20, right: 180, bottom: 20, left: 180 };
+    const margin = { top: 30, right: 160, bottom: 30, left: 160 };
     const width = dimensions.width;
     const height = dimensions.height;
 
@@ -150,21 +187,9 @@ export default function SankeyDiagram() {
 
     const sankeyGenerator = sankey<SankeyNodeExtra, SankeyLinkExtra>()
       .nodeId((d) => d.id)
-      .nodeWidth(20)
-      .nodePadding(16)
-      .nodeAlign((node: SNode) => {
-        // Manual alignment for story clarity
-        // Sources on left, WLF in center, recipients on right
-        const id = node.id;
-        if (id === 'o-wlf') return 1; // center
-        // Money flowing INTO wlf
-        if (['e-tahnoun', 'o-mgx', 'e-sun', 'o-fff'].includes(id)) return 0;
-        // Money flowing OUT of wlf
-        if (['e-donald-trump', 'o-dolomite', 'e-herro', 'e-folkman', 'o-tron'].includes(id)) return 2;
-        // Witkoff network
-        if (['o-witkoff-group', 'c-qatar', 'e-steve-witkoff', 'c-uae'].includes(id)) return 2;
-        return 1;
-      })
+      .nodeWidth(24)
+      .nodePadding(28)
+      .nodeAlign((node: SNode) => node.column)
       .extent([
         [margin.left, margin.top],
         [width - margin.right, height - margin.bottom],
@@ -178,7 +203,7 @@ export default function SankeyDiagram() {
     const sankeyNodes = sankeyData.nodes as SNode[];
     const sankeyLinks = sankeyData.links as SLink[];
 
-    // Color scale for flows — red tones for corruption money
+    // Color scale for flows — red tones
     const colorScale = d3
       .scaleLog()
       .domain([
@@ -187,7 +212,6 @@ export default function SankeyDiagram() {
       ])
       .range([0.3, 1] as unknown as [number, number]);
 
-    // Gradient definitions for links
     const defs = svgSel.append('defs');
 
     // Glow filter
@@ -223,7 +247,7 @@ export default function SankeyDiagram() {
         ) as number;
         return d3.interpolate('#7f1d1d', '#ef4444')(intensity);
       })
-      .attr('stroke-width', (d) => Math.max(2, d.width || 1))
+      .attr('stroke-width', (d) => Math.max(3, d.width || 1))
       .attr('stroke-opacity', (d) => {
         if (!selectedNode) return 0.6;
         const sourceId = (d.source as SNode).id;
@@ -259,24 +283,23 @@ export default function SankeyDiagram() {
     // Nodes
     const nodeGroup = svgSel.append('g').attr('class', 'nodes');
 
-    const nodeRects = nodeGroup
+    nodeGroup
       .selectAll('rect')
       .data(sankeyNodes)
       .join('rect')
       .attr('x', (d) => d.x0!)
       .attr('y', (d) => d.y0!)
       .attr('width', (d) => (d.x1! - d.x0!))
-      .attr('height', (d) => Math.max(1, d.y1! - d.y0!))
+      .attr('height', (d) => Math.max(4, d.y1! - d.y0!))
       .attr('fill', (d) => {
-        if (d.id === 'o-wlf') return '#d97706'; // amber for WLF
-        if (d.entityType === 'person') return '#f97316'; // orange
-        if (d.entityType === 'country') return '#a855f7'; // purple
-        return '#06b6d4'; // cyan for orgs/companies
+        if (d.id === 'wlf') return '#d97706';
+        if (d.entityType === 'person') return '#f97316';
+        if (d.entityType === 'country') return '#a855f7';
+        return '#06b6d4';
       })
       .attr('opacity', (d) => {
         if (!selectedNode) return 0.9;
         if (d.id === selectedNode) return 1;
-        // Check if connected to selected
         const connected = sankeyLinks.some(
           (l) =>
             ((l.source as SNode).id === selectedNode &&
@@ -323,17 +346,12 @@ export default function SankeyDiagram() {
       .join('text')
       .attr('class', 'node-label')
       .attr('x', (d) => {
-        // Labels on the outside of nodes
-        const midX = (d.x0! + d.x1!) / 2;
-        if (midX < width / 2) return d.x0! - 8;
-        return d.x1! + 8;
+        if (d.column <= 1) return d.x0! - 10;
+        return d.x1! + 10;
       })
       .attr('y', (d) => (d.y0! + d.y1!) / 2)
       .attr('dy', '0.35em')
-      .attr('text-anchor', (d) => {
-        const midX = (d.x0! + d.x1!) / 2;
-        return midX < width / 2 ? 'end' : 'start';
-      })
+      .attr('text-anchor', (d) => d.column <= 1 ? 'end' : 'start')
       .attr('fill', (d) => {
         if (!selectedNode) return '#e5e7eb';
         if (d.id === selectedNode) return '#ffffff';
@@ -346,28 +364,23 @@ export default function SankeyDiagram() {
         );
         return connected ? '#e5e7eb' : '#4b5563';
       })
-      .attr('font-size', (d) => {
-        const nodeHeight = d.y1! - d.y0!;
-        return nodeHeight > 40 ? '13px' : '11px';
-      })
-      .attr('font-weight', (d) => (d.id === 'o-wlf' ? 'bold' : 'normal'))
+      .attr('font-size', (d) => d.id === 'wlf' ? '15px' : '13px')
+      .attr('font-weight', (d) => d.id === 'wlf' ? 'bold' : 'normal')
       .text((d) => d.name);
 
-    // Link amount labels (for large flows)
+    // Amount labels on flows
     const linkLabels = svgSel.append('g').attr('class', 'link-labels');
 
     linkLabels
       .selectAll('text')
-      .data(sankeyLinks.filter((d) => (d.width || 0) > 8))
+      .data(sankeyLinks)
       .join('text')
       .attr('x', (d) => {
         const sx = (d.source as SNode).x1!;
         const tx = (d.target as SNode).x0!;
         return (sx + tx) / 2;
       })
-      .attr('y', (d) => {
-        return (d.y0! + d.y1!) / 2;
-      })
+      .attr('y', (d) => (d.y0! + d.y1!) / 2)
       .attr('dy', '0.35em')
       .attr('text-anchor', 'middle')
       .attr('fill', (d) => {
@@ -378,14 +391,14 @@ export default function SankeyDiagram() {
           ? '#fca5a5'
           : '#374151';
       })
-      .attr('font-size', '10px')
+      .attr('font-size', '12px')
       .attr('font-weight', 'bold')
       .attr('pointer-events', 'none')
       .text((d) =>
         formatAmount((d as unknown as { amount_cents: number }).amount_cents)
       );
 
-    // Update on selection change — re-run opacities
+    // Update on selection change
     if (selectedNode !== null) {
       linkPaths.attr('stroke-opacity', (d) => {
         const sourceId = (d.source as SNode).id;
